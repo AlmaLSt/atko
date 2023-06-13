@@ -1,15 +1,12 @@
 package org.bedu.atko.model;
 
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import org.bedu.atko.service.PhoneNumber;
 
-public class Professional {
-@NotBlank
-    private String name;
+public class UpdatedProfessional {
+    @Size(max = 2)
     private int edad;
     @PhoneNumber
     private String  telefono;
@@ -17,11 +14,10 @@ public class Professional {
     private String email;
     @NotBlank
     private String areaTrabajo;
-@NotBlank
+    @NotBlank
     private String categoria;
 
-    public Professional(String name, int edad, String telefono, String email, String areaTrabajo, String categoria) {
-        this.name = name;
+    public UpdatedProfessional(int edad, String telefono, String email, String areaTrabajo, String categoria) {
         this.edad = edad;
         this.telefono = telefono;
         this.email = email;
@@ -30,13 +26,6 @@ public class Professional {
 
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getEdad() {
         return edad;
