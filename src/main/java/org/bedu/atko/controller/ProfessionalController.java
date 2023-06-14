@@ -3,8 +3,6 @@ package org.bedu.atko.controller;
 import jakarta.validation.Valid;
 
 import org.bedu.atko.model.Professional;
-import org.bedu.atko.model.UpdatedProfessional;
-import org.bedu.atko.service.ProfessionalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 

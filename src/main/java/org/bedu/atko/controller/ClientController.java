@@ -1,57 +1,57 @@
 package org.bedu.atko.controller;
 
 import jakarta.validation.Valid;
-import org.bedu.atko.model.Client;
-import org.bedu.atko.model.Professional;
-import org.bedu.atko.model.UpdatedClient;
-import org.bedu.atko.model.UpdatedProfessional;
-import org.bedu.atko.service.ClientService;
-import org.bedu.atko.service.ProfessionalService;
+import org.bedu.atko.dto.Client.CreateClientDTO;
+import org.bedu.atko.dto.Client.UpdateClientDTO;
+import org.bedu.atko.dto.ClientDTO;
+import org.bedu.atko.service.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("clients")
 public class ClientController {
 
-    private final ClientService listaClientes;
+    private final IClientService service;
 
     @Autowired
-    public ClientController(ClientService listaClientes) {
-        this.listaClientes = listaClientes;
+    public ClientController(IClientService service) {
+        this.service = service;
     }
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Client> getClients(){
-        return listaClientes.getAll();
+    public List<ClientDTO> findAll(){
+        return service.findAll();
     }
 
-    @GetMapping("{name}")
-    public Client getClientByName(@PathVariable("name")String name){
-        return listaClientes.getByName(name);
+    @GetMapping("{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Optional<ClientDTO> findByID(@PathVariable("id") long id){
+        return service.findById(id);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Client createClient(@Valid @RequestBody Client client){
-        return listaClientes.add(client);
+    public ClientDTO save(@Valid @RequestBody CreateClientDTO data){
+        return service.save(data);
     }
 
-    @PutMapping("{name}")
-    @ResponseStatus(HttpStatus.OK)
-    public void updateClient(@Valid @RequestBody UpdatedClient client, @PathVariable("name")String name){
-        listaClientes.update(name, client);
+    @PutMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void update(@RequestBody UpdateClientDTO data, @PathVariable("id") long id){
+        service.update(id, data);
     }
 
-    @DeleteMapping("{name}")
-    @ResponseStatus(HttpStatus.OK)
-    public void deleteClient(@PathVariable("name") String name){
-        listaClientes.delete(name);
-    }
 
+    @DeleteMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") long id){
+        service.delete(id);
+    }
 
 }

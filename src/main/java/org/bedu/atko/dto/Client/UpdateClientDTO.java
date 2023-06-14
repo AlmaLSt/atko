@@ -1,13 +1,11 @@
-package org.bedu.atko.dto;
+package org.bedu.atko.dto.Client;
 
 import lombok.Data;
 
 @Data
-public class ClientDTO {
-
-    private long id;
+public class UpdateClientDTO {
     private String name;
-    private int edad;
+    private Integer edad;
     private String telefono;
     private String email;
 }
