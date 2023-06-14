@@ -1,4 +1,4 @@
-package org.bedu.atko.model;
+package org.bedu.atko.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

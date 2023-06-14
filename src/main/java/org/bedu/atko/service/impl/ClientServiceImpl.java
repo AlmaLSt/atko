@@ -5,7 +5,7 @@ import org.bedu.atko.dto.Client.UpdateClientDTO;
 import org.bedu.atko.dto.ClientDTO;
 import org.bedu.atko.exception.ClientNotFoundException;
 import org.bedu.atko.mapper.IClientMapper;
-import org.bedu.atko.model.Client;
+import org.bedu.atko.entity.Client;
 import org.bedu.atko.repository.IClientRepository;
 import org.bedu.atko.service.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;
