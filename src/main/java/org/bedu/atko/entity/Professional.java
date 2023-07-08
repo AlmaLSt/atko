@@ -15,7 +15,7 @@ import lombok.Setter;
 @Table(name = "professionals")
 public class Professional {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(nullable = false)
