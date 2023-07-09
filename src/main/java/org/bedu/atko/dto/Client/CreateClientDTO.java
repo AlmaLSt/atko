@@ -1,10 +1,16 @@
 package org.bedu.atko.dto.Client;
 
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 @Data
+@Builder
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class CreateClientDTO {
     @NotBlank(message = "El nombre es obligatorio")
     private String name;
