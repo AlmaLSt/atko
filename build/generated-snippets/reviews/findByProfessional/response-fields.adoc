@@ -1,0 +1,20 @@
+|===
+|Path|Type|Description
+
+|`+[].id+`
+|`+Number+`
+|identificador del review
+
+|`+[].professional+`
+|`+Object+`
+|datos del professional
+
+|`+[].clients+`
+|`+Object+`
+|datos del cliente
+
+|`+[].description+`
+|`+String+`
+|descripción del review
+
+|===

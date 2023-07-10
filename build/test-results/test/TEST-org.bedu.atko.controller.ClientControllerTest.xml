@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.bedu.atko.controller.ClientControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-07-09T02:57:43" hostname="LAPTOP-6DH68450" time="1.071">
+  <properties/>
+  <testcase name="elimina un cliente" classname="org.bedu.atko.controller.ClientControllerTest" time="0.345"/>
+  <testcase name="obtiene todos los clientes" classname="org.bedu.atko.controller.ClientControllerTest" time="0.325"/>
+  <testcase name="actualiza un cliente" classname="org.bedu.atko.controller.ClientControllerTest" time="0.088"/>
+  <testcase name="controlador obtiene un cliente por su id" classname="org.bedu.atko.controller.ClientControllerTest" time="0.044"/>
+  <testcase name="guarda un cliente" classname="org.bedu.atko.controller.ClientControllerTest" time="0.255"/>
+  <system-out><![CDATA[21:57:39.418 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.bedu.atko.controller.ClientControllerTest]: ClientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:57:39.523 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.controller.ClientControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2023-07-08T21:57:39.853-05:00  INFO 19960 --- [    Test worker] o.b.a.controller.ClientControllerTest    : Starting ClientControllerTest using Java 17.0.2 with PID 19960 (started by jacor in D:\bedu\fase3\modulo2\proyecto\atko-pruebas\atko-main)
+2023-07-08T21:57:39.854-05:00  INFO 19960 --- [    Test worker] o.b.a.controller.ClientControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2023-07-08T21:57:43.355-05:00  INFO 19960 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-07-08T21:57:43.356-05:00  INFO 19960 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-07-08T21:57:43.366-05:00  INFO 19960 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-07-08T21:57:43.448-05:00  INFO 19960 --- [    Test worker] o.b.a.controller.ClientControllerTest    : Started ClientControllerTest in 3.842 seconds (process running for 4.904)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

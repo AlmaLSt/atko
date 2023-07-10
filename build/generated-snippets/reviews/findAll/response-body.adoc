@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+[{"id":1,"professional":{"id":1,"name":"prueba","edad":30,"telefono":"123-456-7890","email":"a@a.com","areaTrabajo":"plomero","categoria":"plomero"},"clients":{"id":1,"name":"Prueba de cliente","edad":24,"telefono":"123-456-7890","email":"pruebacliente@prueba.p"},"description":"prueba review1"},{"id":2,"professional":{"id":2,"name":"prueba2","edad":24,"telefono":"123-456-7890","email":"a@a.com","areaTrabajo":"plomero","categoria":"plomero"},"clients":{"id":2,"name":"Prueba de cliente2","edad":30,"telefono":"123-456-7890","email":"pruebacliente@prueba.p"},"description":"prueba review2"},{"id":3,"professional":{"id":1,"name":"prueba","edad":30,"telefono":"123-456-7890","email":"a@a.com","areaTrabajo":"plomero","categoria":"plomero"},"clients":{"id":2,"name":"Prueba de cliente2","edad":30,"telefono":"123-456-7890","email":"pruebacliente@prueba.p"},"description":"prueba review3"}]
+----

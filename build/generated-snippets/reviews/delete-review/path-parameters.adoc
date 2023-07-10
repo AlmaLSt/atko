@@ -1,0 +1,8 @@
+.+/api/v1/reviews/{review_id}+
+|===
+|Parameter|Description
+
+|`+review_id+`
+|Identificador del review
+
+|===

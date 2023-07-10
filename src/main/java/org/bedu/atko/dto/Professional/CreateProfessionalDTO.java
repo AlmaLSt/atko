@@ -1,9 +1,15 @@
 package org.bedu.atko.dto.Professional;
 
 import jakarta.validation.constraints.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@Builder
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class CreateProfessionalDTO {
     @NotBlank(message = "El nombre es obligatorio")
     private String name;
