@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import org.bedu.atko.entity.Category;
 
 @Data
 @Builder
@@ -23,6 +24,5 @@ public class CreateProfessionalDTO {
     @NotBlank(message = "Indique un área de trabajo")
     private String areaTrabajo;
 
-    @NotBlank(message = "Ingrese una categoria")
-    private String categoria;
+    private Category category;
 }

@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,5 +30,8 @@ public class Client {
 
     @Column
     private String email;
+
+    @ManyToMany(mappedBy = "employmentContracts")
+    Set<Professional> hired;
 }
 

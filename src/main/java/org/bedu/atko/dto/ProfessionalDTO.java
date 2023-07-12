@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -16,5 +18,5 @@ public class ProfessionalDTO {
     private String telefono;
     private String email;
     private String areaTrabajo;
-    private String categoria;
+    private CategoryDTO category;
 }

@@ -1,11 +1,16 @@
 package org.bedu.atko.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.HashSet;
+import java.util.Locale;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -17,7 +22,6 @@ public class Professional {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
@@ -28,7 +32,19 @@ public class Professional {
     private String email;
     @Column(nullable = false)
     private String areaTrabajo;
-    @Column(nullable = false)
-    private String categoria;
+//    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+
+    @ManyToMany
+    @JoinTable(
+            name = "contrataciones",
+            joinColumns = @JoinColumn(name = "professional_id"),
+            inverseJoinColumns = @JoinColumn(name = "clients_id")
+    )
+    Set<Client> employmentContracts;
+
+
 }
 
