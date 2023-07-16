@@ -1,8 +1,8 @@
 package org.bedu.atko.service;
 
 import org.assertj.core.api.Assertions;
-import org.bedu.atko.dto.Client.CreateClientDTO;
-import org.bedu.atko.dto.Client.UpdateClientDTO;
+import org.bedu.atko.dto.client.CreateClientDTO;
+import org.bedu.atko.dto.client.UpdateClientDTO;
 import org.bedu.atko.dto.ClientDTO;
 import org.bedu.atko.entity.Client;
 import org.bedu.atko.mapper.IClientMapper;

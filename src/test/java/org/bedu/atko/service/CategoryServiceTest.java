@@ -1,8 +1,8 @@
 package org.bedu.atko.service;
 
 import org.assertj.core.api.Assertions;
-import org.bedu.atko.dto.Category.CreateCategoryDTO;
-import org.bedu.atko.dto.Category.UpdateCategoryDTO;
+import org.bedu.atko.dto.category.CreateCategoryDTO;
+import org.bedu.atko.dto.category.UpdateCategoryDTO;
 import org.bedu.atko.dto.CategoryDTO;
 import org.bedu.atko.entity.Category;
 import org.bedu.atko.mapper.ICategoryMapper;

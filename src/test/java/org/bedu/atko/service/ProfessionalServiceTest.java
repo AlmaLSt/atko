@@ -2,8 +2,8 @@ package org.bedu.atko.service;
 
 import org.assertj.core.api.Assertions;
 import org.bedu.atko.dto.CategoryDTO;
-import org.bedu.atko.dto.Professional.CreateProfessionalDTO;
-import org.bedu.atko.dto.Professional.UpdateProfessionalDTO;
+import org.bedu.atko.dto.professional.CreateProfessionalDTO;
+import org.bedu.atko.dto.professional.UpdateProfessionalDTO;
 import org.bedu.atko.dto.ProfessionalDTO;
 import org.bedu.atko.entity.Category;
 import org.bedu.atko.entity.Client;
@@ -49,7 +49,7 @@ class ProfessionalServiceTest {
 
         Professional professional = Professional.builder().name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(category).employmentContracts(employmentContracts).build();
 
-        ProfessionalDTO professionalDTO = ProfessionalDTO.builder().name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(categoryDTO).build();
+        ProfessionalDTO professionalDTO = ProfessionalDTO.builder().name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(category).build();
 
         CreateProfessionalDTO createProfessionalDTO = CreateProfessionalDTO.builder().name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(category).build();
 
@@ -91,7 +91,7 @@ class ProfessionalServiceTest {
 
         Professional professional = Professional.builder().id(1L).name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(category).employmentContracts(employmentContracts).build();
 
-        ProfessionalDTO professionalDTO = ProfessionalDTO.builder().name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(categoryDTO).build();
+        ProfessionalDTO professionalDTO = ProfessionalDTO.builder().name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(category).build();
 
         Optional<Professional> professionalId = Optional.of(professional);
 

@@ -1,8 +1,8 @@
 package org.bedu.atko.service;
 
 import org.assertj.core.api.Assertions;
-import org.bedu.atko.dto.Review.CreateReviewDTO;
-import org.bedu.atko.dto.Review.UpdateReviewDTO;
+import org.bedu.atko.dto.review.CreateReviewDTO;
+import org.bedu.atko.dto.review.UpdateReviewDTO;
 import org.bedu.atko.dto.ReviewDTO;
 import org.bedu.atko.entity.Category;
 import org.bedu.atko.entity.Client;
@@ -116,9 +116,7 @@ class ReviewServicesTest {
                 .build();
         Set<Client> employmentContracts = new HashSet<>();
         Professional professional = Professional.builder().name("Julio").edad(32).telefono("789456123").email("julio@gmail.com").areaTrabajo("CDMX").category(category).employmentContracts(employmentContracts).build();
-        Client client = Client.builder().id(1L).name("Ana").edad(27).telefono("123456789").email("ana@gmail.com").build();
 
-        Reviews reviews = Reviews.builder().professional(professional).clients(client).description("This is a review").build();
         UpdateReviewDTO updateReview = UpdateReviewDTO.builder().description("An updated review").build();
 
         assertThatThrownBy(() -> reviewsService.update(updateReview, professional.getId()))
