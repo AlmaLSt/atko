@@ -5,6 +5,7 @@ import org.bedu.atko.dto.client.CreateClientDTO;
 import org.bedu.atko.dto.client.UpdateClientDTO;
 import org.bedu.atko.dto.ClientDTO;
 import org.bedu.atko.entity.Client;
+import org.bedu.atko.exception.ClientNotFoundException;
 import org.bedu.atko.mapper.IClientMapper;
 import org.bedu.atko.repository.IClientRepository;
 import org.bedu.atko.service.impl.ClientServiceImpl;
@@ -113,7 +114,8 @@ class ClientServiceTest {
                 .build();
 
         UpdateClientDTO updatedClient = UpdateClientDTO.builder().telefono("123456799").build();
-        assertThatThrownBy(() -> clientService.update(client.getId(), updatedClient));
+        assertThatThrownBy(() -> clientService.update(client.getId(), updatedClient))
+                .isInstanceOf(ClientNotFoundException.class);
     }
 
     @Test

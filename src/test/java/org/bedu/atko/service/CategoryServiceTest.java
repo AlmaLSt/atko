@@ -5,6 +5,7 @@ import org.bedu.atko.dto.category.CreateCategoryDTO;
 import org.bedu.atko.dto.category.UpdateCategoryDTO;
 import org.bedu.atko.dto.CategoryDTO;
 import org.bedu.atko.entity.Category;
+import org.bedu.atko.exception.CategoryNotFoundException;
 import org.bedu.atko.mapper.ICategoryMapper;
 import org.bedu.atko.repository.ICategoryRepository;
 import org.bedu.atko.service.impl.CategoryServiceImpl;
@@ -105,7 +106,8 @@ class CategoryServiceTest {
         UpdateCategoryDTO updated = new UpdateCategoryDTO();
         updated.setName("Sastreria actualizado");
 
-        assertThatThrownBy(() -> categoryService.update(category.getId(), updated));
+        assertThatThrownBy(() -> categoryService.update(category.getId(), updated))
+                .isInstanceOf(CategoryNotFoundException.class);
     }
 
     @Test
