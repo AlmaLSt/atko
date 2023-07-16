@@ -1,7 +1,7 @@
 package org.bedu.atko.mapper;
 
-import org.bedu.atko.dto.Professional.CreateProfessionalDTO;
-import org.bedu.atko.dto.Professional.UpdateProfessionalDTO;
+import org.bedu.atko.dto.professional.CreateProfessionalDTO;
+import org.bedu.atko.dto.professional.UpdateProfessionalDTO;
 import org.bedu.atko.dto.ProfessionalDTO;
 import org.bedu.atko.entity.Professional;
 import org.mapstruct.*;

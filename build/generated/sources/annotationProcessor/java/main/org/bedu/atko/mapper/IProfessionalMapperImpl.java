@@ -1,15 +1,18 @@
 package org.bedu.atko.mapper;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
 import javax.annotation.processing.Generated;
-import org.bedu.atko.dto.Professional.CreateProfessionalDTO;
-import org.bedu.atko.dto.Professional.UpdateProfessionalDTO;
 import org.bedu.atko.dto.ProfessionalDTO;
+import org.bedu.atko.dto.professional.CreateProfessionalDTO;
+import org.bedu.atko.dto.professional.UpdateProfessionalDTO;
+import org.bedu.atko.entity.Client;
 import org.bedu.atko.entity.Professional;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-08T21:48:56-0500",
+    date = "2023-07-15T18:34:39-0500",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.6.jar, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
@@ -29,7 +32,11 @@ public class IProfessionalMapperImpl implements IProfessionalMapper {
         professionalDTO.telefono( data.getTelefono() );
         professionalDTO.email( data.getEmail() );
         professionalDTO.areaTrabajo( data.getAreaTrabajo() );
-        professionalDTO.categoria( data.getCategoria() );
+        professionalDTO.category( data.getCategory() );
+        Set<Client> set = data.getEmploymentContracts();
+        if ( set != null ) {
+            professionalDTO.employmentContracts( new LinkedHashSet<Client>( set ) );
+        }
 
         return professionalDTO.build();
     }
@@ -47,7 +54,11 @@ public class IProfessionalMapperImpl implements IProfessionalMapper {
         professional.setTelefono( data.getTelefono() );
         professional.setEmail( data.getEmail() );
         professional.setAreaTrabajo( data.getAreaTrabajo() );
-        professional.setCategoria( data.getCategoria() );
+        professional.setCategory( data.getCategory() );
+        Set<Client> set = data.getEmploymentContracts();
+        if ( set != null ) {
+            professional.setEmploymentContracts( new LinkedHashSet<Client>( set ) );
+        }
 
         return professional;
     }
@@ -71,8 +82,21 @@ public class IProfessionalMapperImpl implements IProfessionalMapper {
         if ( data.getAreaTrabajo() != null ) {
             entity.setAreaTrabajo( data.getAreaTrabajo() );
         }
-        if ( data.getCategoria() != null ) {
-            entity.setCategoria( data.getCategoria() );
+        if ( data.getCategory() != null ) {
+            entity.setCategory( data.getCategory() );
+        }
+        if ( entity.getEmploymentContracts() != null ) {
+            Set<Client> set = data.getEmploymentContracts();
+            if ( set != null ) {
+                entity.getEmploymentContracts().clear();
+                entity.getEmploymentContracts().addAll( set );
+            }
+        }
+        else {
+            Set<Client> set = data.getEmploymentContracts();
+            if ( set != null ) {
+                entity.setEmploymentContracts( new LinkedHashSet<Client>( set ) );
+            }
         }
     }
 }

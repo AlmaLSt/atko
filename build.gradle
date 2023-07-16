@@ -3,6 +3,10 @@ plugins {
 	id 'org.springframework.boot' version '3.1.0'
 	id 'io.spring.dependency-management' version '1.1.0'
 	id 'org.asciidoctor.jvm.convert' version '3.3.2'
+	id 'jacoco' // Utilizamos el plugin de Gradle para JaCoCo
+	id 'pmd' // Utilizamos el plugin de Gradle para PMD
+	id "org.sonarqube" version "4.2.1.3168"
+
 }
 
 group = 'org.bedu'
@@ -19,8 +23,56 @@ repositories {
 	mavenCentral()
 }
 
+// Configurar Jacoco para obtener el reporte en formato XML
+jacocoTestReport {
+	reports {
+		xml.required = true // Genere el resultado del reporte en XML
+	}
+}
+
+// Configurar Sonarqube para indicar dónde se encuentra
+// el reporte en XML de Jacoco
+sonar {
+	properties {
+		property "sonar.exclusions", "**/org/bedu/atko/exception/**"
+		property "sonar.jacoco.reportPaths", "build/reports/jacoco/test"
+	}
+}
+
 ext {
 	set('snippetsDir', file("build/generated-snippets"))
+}
+
+test {
+	useJUnitPlatform()
+	// Una vez finalizada la ejecución de las pruebas
+	finalizedBy jacocoTestReport
+}
+
+// Nueva tarea que ejecuta "jacoco" para validar la cobertura de código de las pruebas.
+task coverage {
+	dependsOn test // Al ejecutar el comando "gradle coverage" ejecute primero "gradle test"
+	dependsOn jacocoTestReport // Generar el reporte al ejecutar el comando "gradle coverage"
+	finalizedBy jacocoTestCoverageVerification // Verifica que se cumpla la cobertura configurada
+}
+
+// Configurar el límite de la cobertura mínima necesaria
+// para garantizar la calidad de las pruebas.
+jacocoTestCoverageVerification {
+	violationRules {
+		rule {
+			limit {
+				minimum = 0.20 // 95%
+			}
+		}
+	}
+}
+
+// Configurar PMD para utilizar las reglas de:
+// 1. Best Practices (category/java/bestpractices.xml)
+// 2. Code Style
+pmd {
+	ruleSetFiles = files("${projectDir}/src/test/resources/pmd-rules.xml")
 }
 
 dependencies {
@@ -32,9 +84,11 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
-	testImplementation 'org.mockito:mockito-core:5.4.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+	testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.3'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
 }
 
 tasks.named('test') {

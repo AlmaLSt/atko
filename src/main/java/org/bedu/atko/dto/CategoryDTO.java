@@ -1,11 +1,7 @@
 package org.bedu.atko.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
-import java.util.List;
 
 @Data
 @Builder

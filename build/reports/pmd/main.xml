@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.48.0" timestamp="2023-07-14T17:58:36.245">
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\AtkoApplication.java">
+<violation beginline="7" endline="13" begincolumn="30" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="org.bedu.atko" class="AtkoApplication" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#useutilityclass" priority="3">
+All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+</violation>
+<violation beginline="9" endline="9" begincolumn="26" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko" class="AtkoApplication" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\config\RestConfig.java">
+<violation beginline="13" endline="13" begincolumn="36" endcolumn="65" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.config" class="RestConfig" method="configurePathMatch" variable="configurer" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'configurer' is not assigned and could be declared final
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\controller\CategoryController.java">
+<violation beginline="18" endline="18" begincolumn="30" endcolumn="36" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.controller" class="CategoryController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="18" endline="18" begincolumn="30" endcolumn="36" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.controller" class="CategoryController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'service' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="21" endline="21" begincolumn="31" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="CategoryController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'service' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="68" endcolumn="69" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="findByID" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="33" endline="33" begincolumn="43" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="findByID" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="29" endcolumn="70" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="save" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="86" endcolumn="87" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="45" endline="45" begincolumn="24" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="update" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="61" endcolumn="87" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="49" endcolumn="50" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="51" endline="51" begincolumn="24" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="CategoryController" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\controller\ClientController.java">
+<violation beginline="19" endline="19" begincolumn="34" endcolumn="40" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.controller" class="ClientController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="22" endline="22" begincolumn="29" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="ClientController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'service' is not assigned and could be declared final
+</violation>
+<violation beginline="34" endline="34" begincolumn="66" endcolumn="67" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="findByID" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="34" endline="34" begincolumn="41" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="findByID" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="40" endline="40" begincolumn="27" endcolumn="66" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="save" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="46" endline="46" begincolumn="84" endcolumn="85" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="46" endline="46" begincolumn="24" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="update" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="46" endline="46" begincolumn="59" endcolumn="85" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="53" endline="53" begincolumn="49" endcolumn="50" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="53" endline="53" begincolumn="24" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ClientController" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\controller\ProfessionalController.java">
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="41" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.bedu.atko.entity.Professional'
+</violation>
+<violation beginline="21" endline="21" begincolumn="34" endcolumn="40" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.controller" class="ProfessionalController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="21" endline="21" begincolumn="34" endcolumn="40" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.controller" class="ProfessionalController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'service' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="24" endline="24" begincolumn="35" endcolumn="62" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="ProfessionalController" variable="service" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'service' is not assigned and could be declared final
+</violation>
+<violation beginline="36" endline="36" begincolumn="72" endcolumn="73" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="findByID" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="36" endline="36" begincolumn="47" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="findByID" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="42" endline="42" begincolumn="33" endcolumn="78" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="save" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="90" endcolumn="91" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="48" endline="48" begincolumn="24" endcolumn="62" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="update" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="65" endcolumn="91" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="54" endline="54" begincolumn="49" endcolumn="50" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="54" endline="54" begincolumn="24" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ProfessionalController" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\controller\ReviewController.java">
+<violation beginline="18" endline="18" begincolumn="29" endcolumn="36" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.controller" class="ReviewController" variable="services" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="18" endline="18" begincolumn="29" endcolumn="36" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.controller" class="ReviewController" variable="services" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'services' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="21" endline="21" begincolumn="30" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="ReviewController" variable="services" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'services' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="47" endcolumn="106" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="findByProfessional" variable="professional_id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'professional_id' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="92" endcolumn="106" rule="FormalParameterNamingConventions" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="findByProfessional" variable="professional_id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'professional_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="39" endline="39" begincolumn="27" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="save" variable="reviews" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'reviews' is not assigned and could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="62" endcolumn="109" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="update" variable="review_id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'review_id' is not assigned and could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="24" endcolumn="59" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="update" variable="reviews" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'reviews' is not assigned and could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="101" endcolumn="109" rule="FormalParameterNamingConventions" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="update" variable="review_id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'review_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="51" endline="51" begincolumn="24" endcolumn="71" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="delete" variable="review_id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'review_id' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="63" endcolumn="71" rule="FormalParameterNamingConventions" ruleset="Code Style" package="org.bedu.atko.controller" class="ReviewController" method="delete" variable="review_id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#formalparameternamingconventions" priority="1">
+The method parameter name 'review_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\CategoryDTO.java">
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="22" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.dto" class="CategoryDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.List'
+</violation>
+<violation beginline="15" endline="15" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.dto" class="CategoryDTO" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Category\CreateCategoryDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="34" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Category" class="CreateCategoryDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Category\UpdateCategoryDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="34" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Category" class="UpdateCategoryDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\ClientDTO.java">
+<violation beginline="17" endline="17" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.dto" class="ClientDTO" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Client\CreateClientDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="32" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Client" class="CreateClientDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="50" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.dto.Client" class="CreateClientDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.hibernate.validator.constraints.Length'
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Client\UpdateClientDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="32" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Client" class="UpdateClientDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\ProfessionalDTO.java">
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="22" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.dto" class="ProfessionalDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.List'
+</violation>
+<violation beginline="18" endline="18" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.dto" class="ProfessionalDTO" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="26" endline="26" begincolumn="25" endcolumn="43" rule="LongVariable" ruleset="Code Style" package="org.bedu.atko.dto" class="ProfessionalDTO" variable="employmentContracts" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like employmentContracts
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Professional\CreateProfessionalDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="38" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Professional" class="CreateProfessionalDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="32" endline="32" begincolumn="25" endcolumn="43" rule="LongVariable" ruleset="Code Style" package="org.bedu.atko.dto.Professional" class="CreateProfessionalDTO" variable="employmentContracts" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like employmentContracts
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Professional\UpdateProfessionalDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="38" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Professional" class="UpdateProfessionalDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="24" endline="24" begincolumn="25" endcolumn="43" rule="LongVariable" ruleset="Code Style" package="org.bedu.atko.dto.Professional" class="UpdateProfessionalDTO" variable="employmentContracts" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like employmentContracts
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\ReviewDTO.java">
+<violation beginline="16" endline="16" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.dto" class="ReviewDTO" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Review\CreateReviewDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="32" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Review" class="CreateReviewDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\dto\Review\UpdateReviewDTO.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="32" rule="PackageCase" ruleset="Code Style" package="org.bedu.atko.dto.Review" class="UpdateReviewDTO" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\entity\Category.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="51" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.entity" class="Category" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'com.fasterxml.jackson.annotation.JsonIgnore'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="22" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.entity" class="Category" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.List'
+</violation>
+<violation beginline="21" endline="21" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.entity" class="Category" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\entity\Client.java">
+<violation beginline="20" endline="20" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.entity" class="Client" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\entity\Professional.java">
+<violation beginline="4" endline="4" begincolumn="1" endcolumn="51" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.entity" class="Professional" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'com.fasterxml.jackson.annotation.JsonIgnore'
+</violation>
+<violation beginline="11" endline="11" begincolumn="1" endcolumn="25" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.entity" class="Professional" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.HashSet'
+</violation>
+<violation beginline="12" endline="12" begincolumn="1" endcolumn="24" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.entity" class="Professional" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Locale'
+</violation>
+<violation beginline="24" endline="24" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.entity" class="Professional" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="46" endline="46" begincolumn="25" endcolumn="43" rule="LongVariable" ruleset="Code Style" package="org.bedu.atko.entity" class="Professional" variable="employmentContracts" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like employmentContracts
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\entity\Reviews.java">
+<violation beginline="9" endline="9" begincolumn="1" endcolumn="22" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.entity" class="Reviews" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.List'
+</violation>
+<violation beginline="20" endline="20" begincolumn="18" endcolumn="19" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.entity" class="Reviews" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\exception\CategoryNotFoundException.java">
+<violation beginline="3" endline="4" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="org.bedu.atko.exception" class="CategoryNotFoundException" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\exception\ClientNotFoundException.java">
+<violation beginline="3" endline="5" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="org.bedu.atko.exception" class="ClientNotFoundException" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\exception\ProfessionalNotFoundException.java">
+<violation beginline="3" endline="5" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="org.bedu.atko.exception" class="ProfessionalNotFoundException" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\exception\ReviewNotFoundException.java">
+<violation beginline="3" endline="4" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="org.bedu.atko.exception" class="ReviewNotFoundException" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\exception\ValidationExceptionHandler.java">
+<violation beginline="16" endline="16" begincolumn="100" endcolumn="101" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" variable="ex" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like ex
+</violation>
+<violation beginline="16" endline="16" begincolumn="68" endcolumn="101" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" variable="ex" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'ex' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="22" begincolumn="9" endcolumn="25" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'errors' could be declared final
+</violation>
+<violation beginline="17" endline="22" begincolumn="31" endcolumn="25" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="17" endline="22" begincolumn="31" endcolumn="25" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="17" endline="22" begincolumn="31" endcolumn="25" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="17" endline="22" begincolumn="31" endcolumn="25" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="23" endline="30" begincolumn="16" endcolumn="33" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="25" endline="30" begincolumn="23" endcolumn="32" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="25" endline="30" begincolumn="23" endcolumn="32" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="25" endline="30" begincolumn="23" endcolumn="32" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="25" endline="30" begincolumn="23" endcolumn="32" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.exception" class="ValidationExceptionHandler" method="handleValidationErrors" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\mapper\ICategoryMapper.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="41" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.mapper" class="ICategoryMapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.bedu.atko.dto.ProfessionalDTO'
+</violation>
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="41" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.mapper" class="ICategoryMapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.bedu.atko.entity.Professional'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="37" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.mapper" class="ICategoryMapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.mapstruct.factory.Mappers'
+</violation>
+<violation beginline="20" endline="20" begincolumn="5" endcolumn="73" rule="LinguisticNaming" ruleset="Code Style" package="org.bedu.atko.mapper" class="ICategoryMapper" method="toModel" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The transform method 'toModel' should not return void linguistically
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\mapper\IClientMapper.java">
+<violation beginline="19" endline="19" begincolumn="5" endcolumn="69" rule="LinguisticNaming" ruleset="Code Style" package="org.bedu.atko.mapper" class="IClientMapper" method="toModel" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The transform method 'toModel' should not return void linguistically
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\mapper\IProfessionalMapper.java">
+<violation beginline="18" endline="18" begincolumn="5" endcolumn="81" rule="LinguisticNaming" ruleset="Code Style" package="org.bedu.atko.mapper" class="IProfessionalMapper" method="toModel" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The transform method 'toModel' should not return void linguistically
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\mapper\IReviewMapper.java">
+<violation beginline="18" endline="18" begincolumn="5" endcolumn="70" rule="LinguisticNaming" ruleset="Code Style" package="org.bedu.atko.mapper" class="IReviewMapper" method="toModel" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The transform method 'toModel' should not return void linguistically
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\repository\ICategoryRepository.java">
+<violation beginline="7" endline="7" begincolumn="1" endcolumn="53" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.repository" class="ICategoryRepository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.springframework.data.jpa.repository.Query'
+</violation>
+<violation beginline="10" endline="10" begincolumn="1" endcolumn="26" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.repository" class="ICategoryRepository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'java.util.Optional'
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\repository\IReviewRepository.java">
+<violation beginline="3" endline="3" begincolumn="1" endcolumn="41" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.repository" class="IReviewRepository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.bedu.atko.entity.Professional'
+</violation>
+<violation beginline="12" endline="12" begincolumn="47" endcolumn="48" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.repository" class="IReviewRepository" method="findByProfessional_id" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="12" endline="12" begincolumn="5" endcolumn="50" rule="MethodNamingConventions" ruleset="Code Style" package="org.bedu.atko.repository" class="IReviewRepository" method="findByProfessional_id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodnamingconventions" priority="1">
+The instance method name 'findByProfessional_id' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\ICategoryService.java">
+<violation beginline="13" endline="13" begincolumn="41" endcolumn="42" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="ICategoryService" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="17" endline="17" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="ICategoryService" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="19" endline="19" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="ICategoryService" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\IClientService.java">
+<violation beginline="12" endline="12" begincolumn="39" endcolumn="40" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IClientService" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="16" endline="16" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IClientService" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="18" endline="18" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IClientService" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\IProfessionalService.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="41" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.service" class="IProfessionalService" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.bedu.atko.entity.Professional'
+</violation>
+<violation beginline="8" endline="8" begincolumn="1" endcolumn="36" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.service" class="IProfessionalService" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'javax.swing.text.html.Option'
+</violation>
+<violation beginline="14" endline="14" begincolumn="45" endcolumn="46" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IProfessionalService" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="16" endline="16" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IProfessionalService" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="17" endline="17" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IProfessionalService" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\IReviewServices.java">
+<violation beginline="6" endline="6" begincolumn="1" endcolumn="36" rule="UnnecessaryImport" ruleset="Code Style" package="org.bedu.atko.service" class="IReviewServices" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
+Unused import 'org.bedu.atko.entity.Reviews'
+</violation>
+<violation beginline="15" endline="15" begincolumn="44" endcolumn="45" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IReviewServices" method="getByProfessional" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="17" endline="17" begincolumn="47" endcolumn="48" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IReviewServices" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="19" endline="19" begincolumn="22" endcolumn="23" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service" class="IReviewServices" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\impl\CategoryServiceImpl.java">
+<violation beginline="23" endline="23" begincolumn="33" endcolumn="42" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="23" endline="23" begincolumn="33" endcolumn="42" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'repository' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="24" endline="24" begincolumn="29" endcolumn="34" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="24" endline="24" begincolumn="29" endcolumn="34" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'mapper' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="27" endline="27" begincolumn="64" endcolumn="85" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="CategoryServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'mapper' is not assigned and could be declared final
+</violation>
+<violation beginline="27" endline="27" begincolumn="32" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="CategoryServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'repository' is not assigned and could be declared final
+</violation>
+<violation beginline="32" endline="35" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'findAll()' is missing an @Override annotation.
+</violation>
+<violation beginline="33" endline="33" begincolumn="9" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'categories' could be declared final
+</violation>
+<violation beginline="34" endline="34" begincolumn="16" endcolumn="62" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="34" endline="34" begincolumn="16" endcolumn="62" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="34" endline="34" begincolumn="16" endcolumn="62" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="37" endline="37" begincolumn="48" endcolumn="49" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="37" endline="37" begincolumn="43" endcolumn="49" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="40" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'findById(long)' is missing an @Override annotation.
+</violation>
+<violation beginline="38" endline="38" begincolumn="9" endcolumn="61" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findById" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'category' could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="16" endcolumn="35" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="39" endline="39" begincolumn="64" endcolumn="77" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="42" endline="42" begincolumn="29" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="save" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="42" endline="45" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="save" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'save(CreateCategoryDTO)' is missing an @Override annotation.
+</violation>
+<violation beginline="43" endline="43" begincolumn="9" endcolumn="63" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="save" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entity' could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="47" endline="47" begincolumn="33" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="47" endline="55" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'update(long, UpdateCategoryDTO)' is missing an @Override annotation.
+</violation>
+<violation beginline="48" endline="48" begincolumn="9" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'current' could be declared final
+</violation>
+<violation beginline="49" endline="49" begincolumn="14" endcolumn="32" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="52" endline="52" begincolumn="9" endcolumn="41" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'category' could be declared final
+</violation>
+<violation beginline="52" endline="52" begincolumn="29" endcolumn="41" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="57" endline="57" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="57" endline="57" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="57" endline="59" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="CategoryServiceImpl" method="delete" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'delete(long)' is missing an @Override annotation.
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\impl\ClientServiceImpl.java">
+<violation beginline="20" endline="20" begincolumn="31" endcolumn="40" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="ClientServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="20" endline="20" begincolumn="31" endcolumn="40" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'repository' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="21" endline="21" begincolumn="27" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="ClientServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="21" endline="21" begincolumn="27" endcolumn="32" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'mapper' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="24" endline="24" begincolumn="60" endcolumn="79" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="ClientServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'mapper' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="30" endcolumn="57" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="ClientServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'repository' is not assigned and could be declared final
+</violation>
+<violation beginline="30" endline="33" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'findAll()' is missing an @Override annotation.
+</violation>
+<violation beginline="31" endline="31" begincolumn="9" endcolumn="51" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'clients' could be declared final
+</violation>
+<violation beginline="32" endline="32" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="32" endline="32" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="32" endline="32" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="36" endline="36" begincolumn="46" endcolumn="47" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="36" endline="36" begincolumn="41" endcolumn="47" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="36" endline="39" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'findById(long)' is missing an @Override annotation.
+</violation>
+<violation beginline="37" endline="37" begincolumn="9" endcolumn="57" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findById" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'client' could be declared final
+</violation>
+<violation beginline="38" endline="38" begincolumn="16" endcolumn="33" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="38" endline="38" begincolumn="62" endcolumn="73" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="42" endline="42" begincolumn="27" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="save" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="42" endline="45" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="save" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'save(CreateClientDTO)' is missing an @Override annotation.
+</violation>
+<violation beginline="43" endline="43" begincolumn="9" endcolumn="61" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="save" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entity' could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="48" endline="48" begincolumn="33" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="48" endline="57" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'update(long, UpdateClientDTO)' is missing an @Override annotation.
+</violation>
+<violation beginline="49" endline="49" begincolumn="9" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'current' could be declared final
+</violation>
+<violation beginline="50" endline="50" begincolumn="13" endcolumn="31" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="53" endline="53" begincolumn="9" endcolumn="37" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'client' could be declared final
+</violation>
+<violation beginline="53" endline="53" begincolumn="25" endcolumn="37" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="60" endline="60" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="60" endline="60" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="60" endline="63" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ClientServiceImpl" method="delete" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'delete(long)' is missing an @Override annotation.
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\impl\ProfessionalServiceImpl.java">
+<violation beginline="19" endline="19" begincolumn="37" endcolumn="46" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="19" endline="19" begincolumn="37" endcolumn="46" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'repository' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="20" endline="20" begincolumn="33" endcolumn="38" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="20" endline="20" begincolumn="33" endcolumn="38" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'mapper' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="23" endline="23" begincolumn="72" endcolumn="97" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="ProfessionalServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'mapper' is not assigned and could be declared final
+</violation>
+<violation beginline="23" endline="23" begincolumn="36" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="ProfessionalServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'repository' is not assigned and could be declared final
+</violation>
+<violation beginline="28" endline="31" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'findAll()' is missing an @Override annotation.
+</violation>
+<violation beginline="29" endline="29" begincolumn="9" endcolumn="63" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'professionals' could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="16" endcolumn="65" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="30" endline="30" begincolumn="16" endcolumn="65" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="30" endline="30" begincolumn="16" endcolumn="65" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="33" endline="33" begincolumn="52" endcolumn="53" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="33" endline="33" begincolumn="47" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="36" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'findById(long)' is missing an @Override annotation.
+</violation>
+<violation beginline="34" endline="34" begincolumn="9" endcolumn="69" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findById" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'professional' could be declared final
+</violation>
+<violation beginline="35" endline="35" begincolumn="16" endcolumn="39" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="35" endline="35" begincolumn="68" endcolumn="85" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="findById" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="38" endline="38" begincolumn="33" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="save" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="38" endline="41" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="save" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'save(CreateProfessionalDTO)' is missing an @Override annotation.
+</violation>
+<violation beginline="39" endline="39" begincolumn="9" endcolumn="67" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="save" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entity' could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="43" endline="43" begincolumn="33" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="43" endline="51" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'update(long, UpdateProfessionalDTO)' is missing an @Override annotation.
+</violation>
+<violation beginline="44" endline="44" begincolumn="9" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'current' could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="14" endcolumn="32" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="48" endline="48" begincolumn="9" endcolumn="49" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'professional' could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="37" endcolumn="49" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="52" endline="52" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="52" endline="52" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="52" endline="54" begincolumn="12" endcolumn="5" rule="MissingOverride" ruleset="Best Practices" package="org.bedu.atko.service.impl" class="ProfessionalServiceImpl" method="delete" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'delete(long)' is missing an @Override annotation.
+</violation>
+</file>
+<file name="D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main\src\main\java\org\bedu\atko\service\impl\ReviewsServiceImpl.java">
+<violation beginline="20" endline="20" begincolumn="31" endcolumn="40" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="20" endline="20" begincolumn="31" endcolumn="40" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'repository' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="21" endline="21" begincolumn="27" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="21" endline="21" begincolumn="27" endcolumn="32" rule="ImmutableField" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'mapper' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="24" endline="24" begincolumn="61" endcolumn="80" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="ReviewsServiceImpl" variable="mapper" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'mapper' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="31" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="ReviewsServiceImpl" variable="repository" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'repository' is not assigned and could be declared final
+</violation>
+<violation beginline="31" endline="31" begincolumn="9" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getAll" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'reviews' could be declared final
+</violation>
+<violation beginline="32" endline="32" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="32" endline="32" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="32" endline="32" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getAll" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="36" endline="36" begincolumn="51" endcolumn="52" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getByProfessional" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="36" endline="36" begincolumn="46" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getByProfessional" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="9" endcolumn="68" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getByProfessional" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'reviews' could be declared final
+</violation>
+<violation beginline="38" endline="38" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getByProfessional" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="38" endline="38" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getByProfessional" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="38" endline="38" begincolumn="16" endcolumn="59" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="getByProfessional" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="42" endline="42" begincolumn="27" endcolumn="49" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="save" variable="reviews" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'reviews' is not assigned and could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="9" endcolumn="65" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="save" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entity' could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="54" endcolumn="55" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="48" endline="48" begincolumn="49" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="update" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="24" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="update" variable="reviews" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'reviews' is not assigned and could be declared final
+</violation>
+<violation beginline="49" endline="49" begincolumn="9" endcolumn="59" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'current' could be declared final
+</violation>
+<violation beginline="50" endline="50" begincolumn="14" endcolumn="32" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="53" endline="53" begincolumn="9" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="update" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'reviews1' could be declared final
+</violation>
+<violation beginline="53" endline="53" begincolumn="28" endcolumn="40" rule="LawOfDemeter" ruleset="Design" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="update" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="59" endline="59" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="59" endline="59" begincolumn="24" endcolumn="30" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="org.bedu.atko.service.impl" class="ReviewsServiceImpl" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-6.48.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+</file>
+<configerror rule="LoosePackageCoupling" msg="No packages or classes specified"/>
+</pmd>

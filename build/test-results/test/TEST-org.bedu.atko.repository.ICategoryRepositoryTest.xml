@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.bedu.atko.repository.ICategoryRepositoryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-07-15T23:28:33" hostname="LAPTOP-6DH68450" time="0.241">
+  <properties/>
+  <testcase name="Should delete a category" classname="org.bedu.atko.repository.ICategoryRepositoryTest" time="0.063"/>
+  <testcase name="Should get all categories" classname="org.bedu.atko.repository.ICategoryRepositoryTest" time="0.029"/>
+  <testcase name="Should update a category" classname="org.bedu.atko.repository.ICategoryRepositoryTest" time="0.112"/>
+  <testcase name="Should get category by id" classname="org.bedu.atko.repository.ICategoryRepositoryTest" time="0.022"/>
+  <testcase name="Should save a new category" classname="org.bedu.atko.repository.ICategoryRepositoryTest" time="0.015"/>
+  <system-out><![CDATA[2023-07-15T18:28:23.934-05:00  INFO 10252 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.bedu.atko.repository.ICategoryRepositoryTest]: ICategoryRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-07-15T18:28:23.964-05:00  INFO 10252 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.repository.ICategoryRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2023-07-15T18:28:24.022-05:00  INFO 10252 --- [    Test worker] o.b.a.r.ICategoryRepositoryTest          : Starting ICategoryRepositoryTest using Java 17.0.2 with PID 10252 (started by jacor in D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main)
+2023-07-15T18:28:24.023-05:00  INFO 10252 --- [    Test worker] o.b.a.r.ICategoryRepositoryTest          : No active profile set, falling back to 1 default profile: "default"
+2023-07-15T18:28:24.971-05:00  INFO 10252 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-15T18:28:25.161-05:00  INFO 10252 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 160 ms. Found 4 JPA repository interfaces.
+2023-07-15T18:28:25.945-05:00  INFO 10252 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-15T18:28:26.189-05:00  INFO 10252 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-07-15T18:28:26.199-05:00  INFO 10252 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-15T18:28:26.826-05:00  INFO 10252 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-15T18:28:26.863-05:00  INFO 10252 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-15T18:28:26.934-05:00  INFO 10252 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-15T18:28:28.126-05:00  INFO 10252 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53bb9bd
+2023-07-15T18:28:28.136-05:00  INFO 10252 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-15T18:28:28.321-05:00  INFO 10252 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-15T18:28:28.328-05:00  WARN 10252 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-15T18:28:29.490-05:00  INFO 10252 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-15T18:28:31.362-05:00  INFO 10252 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-15T18:28:31.592-05:00  INFO 10252 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-15T18:28:32.872-05:00  WARN 10252 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-15T18:28:33.179-05:00  INFO 10252 --- [    Test worker] o.b.a.r.ICategoryRepositoryTest          : Started ICategoryRepositoryTest in 9.203 seconds (process running for 30.75)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.clients_id,
+        r1_0.description,
+        r1_0.professional_id 
+    from
+        reviews r1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    delete 
+    from
+        reviews 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        reviews 
+    where
+        id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        next_val as id_val 
+    from
+        category_seq for update
+Hibernate: 
+    update
+        category_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+Hibernate: 
+    insert 
+    into
+        category
+        (name,id) 
+    values
+        (?,?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    update
+        category 
+    set
+        name=? 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    update
+        category 
+    set
+        name=? 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.clients_id,
+        r1_0.description,
+        r1_0.professional_id 
+    from
+        reviews r1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

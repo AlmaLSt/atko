@@ -1,7 +1,7 @@
 package org.bedu.atko.service;
 
-import org.bedu.atko.dto.Client.CreateClientDTO;
-import org.bedu.atko.dto.Client.UpdateClientDTO;
+import org.bedu.atko.dto.client.CreateClientDTO;
+import org.bedu.atko.dto.client.UpdateClientDTO;
 import org.bedu.atko.dto.ClientDTO;
 
 import java.util.List;

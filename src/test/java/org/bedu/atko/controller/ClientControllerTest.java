@@ -1,8 +1,8 @@
 package org.bedu.atko.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.bedu.atko.dto.Client.CreateClientDTO;
-import org.bedu.atko.dto.Client.UpdateClientDTO;
+import org.bedu.atko.dto.client.CreateClientDTO;
+import org.bedu.atko.dto.client.UpdateClientDTO;
 import org.bedu.atko.dto.ClientDTO;
 import org.bedu.atko.service.IClientService;
 import org.junit.jupiter.api.DisplayName;
@@ -66,7 +66,8 @@ class ClientControllerTest {
                                 fieldWithPath("name").description("nombre del cliente"),
                                 fieldWithPath("edad").description("edad del cliente"),
                                 fieldWithPath("telefono").description("telefono del cliente"),
-                                fieldWithPath("email").description("correo electronico del cliente")
+                                fieldWithPath("email").description("correo electronico del cliente"),
+                                subsectionWithPath("hired").description("datos del contrante")
                         )));
     }
 
@@ -98,7 +99,8 @@ class ClientControllerTest {
                                 fieldWithPath("[].name").description("nombre del cliente"),
                                 fieldWithPath("[].edad").description("edad del cliente"),
                                 fieldWithPath("[].telefono").description("telefono del cliente"),
-                                fieldWithPath("[].email").description("correo electronico del cliente")
+                                fieldWithPath("[].email").description("correo electronico del cliente"),
+                                subsectionWithPath("[].hired").description("datos del contrante")
                         )));
     }
 
@@ -120,7 +122,8 @@ class ClientControllerTest {
                                 fieldWithPath("name").description("nombre del cliente"),
                                 fieldWithPath("edad").description("edad del cliente"),
                                 fieldWithPath("telefono").description("telefono del cliente"),
-                                fieldWithPath("email").description("correo electronico del cliente")
+                                fieldWithPath("email").description("correo electronico del cliente"),
+                                subsectionWithPath("hired").description("datos del contrante")
                         ),
                         responseHeaders(
                                 headerWithName("Content-Type").description("El Content-Type del recurso")
@@ -147,7 +150,8 @@ class ClientControllerTest {
                                 fieldWithPath("name").description("nombre del cliente"),
                                 fieldWithPath("edad").description("edad del cliente"),
                                 fieldWithPath("telefono").description("telefono del cliente"),
-                                fieldWithPath("email").description("correo electronico del cliente")
+                                fieldWithPath("email").description("correo electronico del cliente"),
+                                subsectionWithPath("hired").description("datos del contrante")
                         )
                 ));
     }

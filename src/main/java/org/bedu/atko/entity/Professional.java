@@ -2,7 +2,10 @@ package org.bedu.atko.entity;
 
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Set;
 
@@ -10,7 +13,6 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "professionals")
 public class Professional {
@@ -38,7 +40,7 @@ public class Professional {
             joinColumns = @JoinColumn(name = "professional_id"),
             inverseJoinColumns = @JoinColumn(name = "clients_id")
     )
-    Set<Client> employmentContracts;
+    private Set<Client> employmentContracts;
 
 
 }

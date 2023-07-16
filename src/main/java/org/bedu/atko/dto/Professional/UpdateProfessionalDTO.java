@@ -1,9 +1,10 @@
-package org.bedu.atko.dto.Professional;
+package org.bedu.atko.dto.professional;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+import org.bedu.atko.entity.Category;
+import org.bedu.atko.entity.Client;
+
+import java.util.Set;
 
 @Data
 @Builder
@@ -15,5 +16,7 @@ public class UpdateProfessionalDTO {
     private String telefono;
     private String email;
     private String areaTrabajo;
-    private String categoria;
+    private Category category;
+
+    private Set<Client> employmentContracts;
 }

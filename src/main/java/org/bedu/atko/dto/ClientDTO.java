@@ -1,9 +1,9 @@
 package org.bedu.atko.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+import org.bedu.atko.entity.Professional;
+
+import java.util.Set;
 
 @Data
 @Builder
@@ -16,4 +16,6 @@ public class ClientDTO {
     private int edad;
     private String telefono;
     private String email;
+
+    private Set<Professional> hired;
 }

@@ -1,8 +1,11 @@
-package org.bedu.atko.dto.Category;
+package org.bedu.atko.dto.category;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@Builder
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class UpdateCategoryDTO {
     private String name;
 }

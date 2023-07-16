@@ -1,13 +1,13 @@
 package org.bedu.atko.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.bedu.atko.dto.Review.CreateReviewDTO;
-import org.bedu.atko.dto.Review.UpdateReviewDTO;
+import org.bedu.atko.dto.review.CreateReviewDTO;
+import org.bedu.atko.dto.review.UpdateReviewDTO;
 import org.bedu.atko.dto.ReviewDTO;
+import org.bedu.atko.entity.Category;
 import org.bedu.atko.entity.Client;
 import org.bedu.atko.entity.Professional;
 import org.bedu.atko.service.IReviewServices;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.hamcrest.Matchers.is;
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -45,18 +47,11 @@ class ReviewControllerTest {
     @DisplayName("obtiene todos los reviews")
     void findAll() throws Exception {
 
-        Client client = new Client();
-        client.setId(1);
-        client.setName("Prueba de cliente");
-        client.setEdad(24);
-        client.setTelefono("123-456-7890");
-        client.setEmail("pruebacliente@prueba.p");
-        Client client2 = new Client();
-        client2.setId(2);
-        client2.setName("Prueba de cliente2");
-        client2.setEdad(30);
-        client2.setTelefono("123-456-7890");
-        client2.setEmail("pruebacliente@prueba.p");
+        Category category = new Category();
+        category.setName("construcción");
+
+        Category category2 = new Category();
+        category2.setName("fontanería");
 
         Professional professional = new Professional();
         professional.setId(1);
@@ -65,7 +60,7 @@ class ReviewControllerTest {
         professional.setTelefono("123-456-7890");
         professional.setEmail("a@a.com");
         professional.setAreaTrabajo("plomero");
-        professional.setCategoria("plomero");
+        professional.setCategory(category);
         Professional professional2 = new Professional();
         professional2.setId(2);
         professional2.setName("prueba2");
@@ -73,7 +68,27 @@ class ReviewControllerTest {
         professional2.setTelefono("123-456-7890");
         professional2.setEmail("a@a.com");
         professional2.setAreaTrabajo("plomero");
-        professional2.setCategoria("plomero");
+        professional2.setCategory(category2);
+
+        Set<Professional> pro = new HashSet<>();
+
+        pro.add(professional);
+        pro.add(professional2);
+
+        Client client = new Client();
+        client.setId(1);
+        client.setName("Prueba de cliente");
+        client.setEdad(24);
+        client.setTelefono("123-456-7890");
+        client.setEmail("pruebacliente@prueba.p");
+        client.setHired(pro);
+        Client client2 = new Client();
+        client2.setId(2);
+        client2.setName("Prueba de cliente2");
+        client2.setEdad(30);
+        client2.setTelefono("123-456-7890");
+        client2.setEmail("pruebacliente@prueba.p");
+        client2.setHired(pro);
 
         List<ReviewDTO> reviews = Arrays.asList(
                 ReviewDTO.builder().id(1L).professional(professional).clients(client).description("prueba review1").build(),
@@ -107,18 +122,11 @@ class ReviewControllerTest {
     @DisplayName("obtiene un review por el id del profesional")
     void findByProfessional() throws Exception {
 
-        Client client = new Client();
-        client.setId(1);
-        client.setName("Prueba de cliente");
-        client.setEdad(24);
-        client.setTelefono("123-456-7890");
-        client.setEmail("pruebacliente@prueba.p");
-        Client client2 = new Client();
-        client2.setId(2);
-        client2.setName("Prueba de cliente2");
-        client2.setEdad(30);
-        client2.setTelefono("123-456-7890");
-        client2.setEmail("pruebacliente@prueba.p");
+        Category category = new Category();
+        category.setName("construcción");
+
+        Category category2 = new Category();
+        category2.setName("fontanería");
 
         Professional professional = new Professional();
         professional.setId(1);
@@ -127,7 +135,7 @@ class ReviewControllerTest {
         professional.setTelefono("123-456-7890");
         professional.setEmail("a@a.com");
         professional.setAreaTrabajo("plomero");
-        professional.setCategoria("plomero");
+        professional.setCategory(category);
         Professional professional2 = new Professional();
         professional2.setId(2);
         professional2.setName("prueba2");
@@ -135,7 +143,27 @@ class ReviewControllerTest {
         professional2.setTelefono("123-456-7890");
         professional2.setEmail("a@a.com");
         professional2.setAreaTrabajo("plomero");
-        professional2.setCategoria("plomero");
+        professional2.setCategory(category2);
+
+        Set<Professional> pro = new HashSet<>();
+
+        pro.add(professional);
+        pro.add(professional2);
+
+        Client client = new Client();
+        client.setId(1);
+        client.setName("Prueba de cliente");
+        client.setEdad(24);
+        client.setTelefono("123-456-7890");
+        client.setEmail("pruebacliente@prueba.p");
+        client.setHired(pro);
+        Client client2 = new Client();
+        client2.setId(2);
+        client2.setName("Prueba de cliente2");
+        client2.setEdad(30);
+        client2.setTelefono("123-456-7890");
+        client2.setEmail("pruebacliente@prueba.p");
+        client2.setHired(pro);
 
         List<ReviewDTO> reviews = Arrays.asList(
                 ReviewDTO.builder().id(1L).professional(professional).clients(client).description("prueba review1").build(),
@@ -167,12 +195,8 @@ class ReviewControllerTest {
     @DisplayName("guarda un review")
     void save() throws Exception {
 
-        Client client = new Client();
-        client.setId(1);
-        client.setName("Prueba de cliente");
-        client.setEdad(24);
-        client.setTelefono("123-456-7890");
-        client.setEmail("pruebacliente@prueba.p");
+        Category category = new Category();
+        category.setName("construcción");
 
         Professional professional = new Professional();
         professional.setId(1);
@@ -181,7 +205,20 @@ class ReviewControllerTest {
         professional.setTelefono("123-456-7890");
         professional.setEmail("a@a.com");
         professional.setAreaTrabajo("plomero");
-        professional.setCategoria("plomero");
+        professional.setCategory(category);
+
+        Set<Professional> pro = new HashSet<>();
+
+        pro.add(professional);
+
+        Client client = new Client();
+        client.setId(1);
+        client.setName("Prueba de cliente");
+        client.setEdad(24);
+        client.setTelefono("123-456-7890");
+        client.setEmail("pruebacliente@prueba.p");
+        client.setHired(pro);
+
 
         CreateReviewDTO reviewParametro = CreateReviewDTO.builder().professional(professional).clients(client).description("prueba review1").build();
         ReviewDTO reviewRespuesta = ReviewDTO.builder().id(1L).professional(professional).clients(client).description("prueba review1").build();
@@ -206,12 +243,8 @@ class ReviewControllerTest {
     @DisplayName("actualiza un review")
     void update() throws Exception {
 
-        Client client = new Client();
-        client.setId(1);
-        client.setName("Prueba de cliente");
-        client.setEdad(24);
-        client.setTelefono("123-456-7890");
-        client.setEmail("pruebacliente@prueba.p");
+        Category category = new Category();
+        category.setName("construcción");
 
         Professional professional = new Professional();
         professional.setId(1);
@@ -220,7 +253,19 @@ class ReviewControllerTest {
         professional.setTelefono("123-456-7890");
         professional.setEmail("a@a.com");
         professional.setAreaTrabajo("plomero");
-        professional.setCategoria("plomero");
+        professional.setCategory(category);
+
+        Set<Professional> pro = new HashSet<>();
+
+        pro.add(professional);
+
+        Client client = new Client();
+        client.setId(1);
+        client.setName("Prueba de cliente");
+        client.setEdad(24);
+        client.setTelefono("123-456-7890");
+        client.setEmail("pruebacliente@prueba.p");
+        client.setHired(pro);
 
 
         UpdateReviewDTO reviewParametro = UpdateReviewDTO.builder().professional(professional).clients(client).description("prueba review1").build();

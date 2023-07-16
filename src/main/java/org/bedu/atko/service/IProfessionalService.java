@@ -1,11 +1,9 @@
 package org.bedu.atko.service;
 
-import org.bedu.atko.dto.Professional.CreateProfessionalDTO;
-import org.bedu.atko.dto.Professional.UpdateProfessionalDTO;
+import org.bedu.atko.dto.professional.CreateProfessionalDTO;
+import org.bedu.atko.dto.professional.UpdateProfessionalDTO;
 import org.bedu.atko.dto.ProfessionalDTO;
-import org.bedu.atko.entity.Professional;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 

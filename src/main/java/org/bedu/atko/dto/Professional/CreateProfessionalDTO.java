@@ -1,11 +1,11 @@
-package org.bedu.atko.dto.Professional;
+package org.bedu.atko.dto.professional;
 
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.bedu.atko.entity.Category;
+import org.bedu.atko.entity.Client;
+
+import java.util.Set;
 
 @Data
 @Builder
@@ -23,6 +23,8 @@ public class CreateProfessionalDTO {
     private String email;
     @NotBlank(message = "Indique un área de trabajo")
     private String areaTrabajo;
-
+    @NotNull(message = "Debe indicar el id de la categoría")
     private Category category;
+
+    private Set<Client> employmentContracts;
 }

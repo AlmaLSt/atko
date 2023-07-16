@@ -1,13 +1,16 @@
 package org.bedu.atko.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "category")
 public class Category {
@@ -17,7 +20,5 @@ public class Category {
     @Column(nullable = false)
     private String name;
 
-//    @JsonIgnore
-//    @OneToMany(mappedBy = "category")
-//    List<Professional> professionals;
+
 }
