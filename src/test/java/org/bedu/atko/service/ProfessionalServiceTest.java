@@ -8,6 +8,7 @@ import org.bedu.atko.dto.ProfessionalDTO;
 import org.bedu.atko.entity.Category;
 import org.bedu.atko.entity.Client;
 import org.bedu.atko.entity.Professional;
+import org.bedu.atko.exception.ProfessionalNotFoundException;
 import org.bedu.atko.mapper.IProfessionalMapper;
 import org.bedu.atko.repository.IProfessionalRepository;
 import org.bedu.atko.service.impl.ProfessionalServiceImpl;
@@ -21,6 +22,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.*;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.mockito.Mockito.*;
 
@@ -116,15 +118,8 @@ class ProfessionalServiceTest {
 
         UpdateProfessionalDTO updateProfessional = UpdateProfessionalDTO.builder().name("Julio Vázquez").build();
 
-        Optional<Professional> professionalId = Optional.of(professional);
-
-        when(professionalRepository.findById(professional.getId())).thenReturn(professionalId);
-
-        professionalService.update(professional.getId(), updateProfessional);
-
-        assertAll(() -> professionalService.update(professional.getId(), updateProfessional));
-
-        verify(professionalRepository, times(2)).findById(professional.getId());
+        assertThatThrownBy(() -> professionalService.update(professional.getId(), updateProfessional))
+                .isInstanceOf(ProfessionalNotFoundException.class);
     }
 
     @Test

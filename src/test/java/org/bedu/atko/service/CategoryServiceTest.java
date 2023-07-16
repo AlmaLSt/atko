@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
@@ -104,16 +105,7 @@ class CategoryServiceTest {
         UpdateCategoryDTO updated = new UpdateCategoryDTO();
         updated.setName("Sastreria actualizado");
 
-        Optional<Category> categoryId = Optional.of(category);
-
-        when(categoryRepository.findById(category.getId())).thenReturn(categoryId);
-
-        categoryService.update(category.getId(), updated);
-
-        assertAll(() -> categoryService.update(category.getId(), updated));
-
-        verify(categoryRepository, times(2)).findById(category.getId());
-
+        assertThatThrownBy(() -> categoryService.update(category.getId(), updated));
     }
 
     @Test

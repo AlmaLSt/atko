@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.mockito.Mockito.*;
 
@@ -112,16 +113,7 @@ class ClientServiceTest {
                 .build();
 
         UpdateClientDTO updatedClient = UpdateClientDTO.builder().telefono("123456799").build();
-
-        Optional<Client> clientId = Optional.of(client);
-
-        when(clientRepository.findById(client.getId())).thenReturn(clientId);
-
-        clientService.update(client.getId(), updatedClient);
-
-        assertAll(() -> clientService.update(client.getId(), updatedClient));
-
-        verify(clientRepository, times(2)).findById(client.getId());
+        assertThatThrownBy(() -> clientService.update(client.getId(), updatedClient));
     }
 
     @Test

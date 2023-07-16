@@ -137,9 +137,9 @@ class ReviewServicesTest {
 
         Reviews reviews = Reviews.builder().professional(professional).clients(client).description("This is a review").build();
 
-        reviewsService.delete(professional.getId());
+        reviewsService.delete(reviews.getId());
 
-        assertAll(() -> reviewsService.delete(professional.getId()));
+        assertAll(() -> reviewsService.delete(reviews.getId()));
     }
 
 }
