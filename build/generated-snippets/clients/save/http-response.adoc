@@ -2,7 +2,7 @@
 ----
 HTTP/1.1 201 Created
 Content-Type: application/json
-Content-Length: 91
+Content-Length: 104
 
-{"id":1,"name":"Nombre","edad":20,"telefono":"123-456-7890","email":"cliente@contacto.com"}
+{"id":1,"name":"Nombre","edad":20,"telefono":"123-456-7890","email":"cliente@contacto.com","hired":null}
 ----

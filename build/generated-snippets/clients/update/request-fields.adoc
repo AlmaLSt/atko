@@ -17,4 +17,8 @@
 |`+String+`
 |correo electronico del cliente
 
+|`+hired+`
+|`+Null+`
+|datos del contrante
+
 |===

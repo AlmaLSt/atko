@@ -1,0 +1,4 @@
+[source,json,options="nowrap"]
+----
+[{"id":1,"name":"Nombre"},{"id":2,"name":"Nombre2"},{"id":3,"name":"Nombre3"}]
+----

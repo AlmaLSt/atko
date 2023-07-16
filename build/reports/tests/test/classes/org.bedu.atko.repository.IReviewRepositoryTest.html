@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.249s</div>
+<div class="counter">0.270s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,25 +81,25 @@
 <tr>
 <td class="success">Elimina un review</td>
 <td class="success">delete()</td>
-<td class="success">0.066s</td>
+<td class="success">0.063s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">findByProfessional_id()</td>
 <td class="success">findByProfessional_id()</td>
-<td class="success">0.119s</td>
+<td class="success">0.138s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Obtiene todos los reviews</td>
 <td class="success">getAll()</td>
-<td class="success">0.050s</td>
+<td class="success">0.053s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Guarda un review</td>
 <td class="success">save()</td>
-<td class="success">0.014s</td>
+<td class="success">0.016s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -107,8 +107,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-07-08T21:57:51.239-05:00  INFO 19960 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.bedu.atko.repository.IReviewRepositoryTest]: IReviewRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-07-08T21:57:51.243-05:00  INFO 19960 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.repository.IReviewRepositoryTest
+<pre>2023-07-15T18:28:35.039-05:00  INFO 10252 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.bedu.atko.repository.IReviewRepositoryTest]: IReviewRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-07-15T18:28:35.042-05:00  INFO 10252 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.repository.IReviewRepositoryTest
 Hibernate: 
     select
         r1_0.id,
@@ -120,6 +120,12 @@ Hibernate:
 Hibernate: 
     select
         c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
         c1_0.edad,
         c1_0.email,
         c1_0.name,
@@ -127,22 +133,10 @@ Hibernate:
     from
         clients c1_0
 Hibernate: 
-    delete 
-    from
-        clients 
-    where
-        id=?
-Hibernate: 
-    delete 
-    from
-        clients 
-    where
-        id=?
-Hibernate: 
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        p1_0.category_id,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
@@ -152,6 +146,34 @@ Hibernate:
 Hibernate: 
     insert 
     into
+        category
+        (name,id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        category
+        (name,id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        professionals
+        (area_trabajo,category_id,edad,email,name,telefono) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        professionals
+        (area_trabajo,category_id,edad,email,name,telefono) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
         clients
         (edad,email,name,telefono) 
     values
@@ -163,20 +185,6 @@ Hibernate:
         (edad,email,name,telefono) 
     values
         (?,?,?,?)
-Hibernate: 
-    insert 
-    into
-        professionals
-        (area_trabajo,categoria,edad,email,name,telefono) 
-    values
-        (?,?,?,?,?,?)
-Hibernate: 
-    insert 
-    into
-        professionals
-        (area_trabajo,categoria,edad,email,name,telefono) 
-    values
-        (?,?,?,?,?,?)
 Hibernate: 
     insert 
     into
@@ -214,13 +222,17 @@ Hibernate:
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c1_0.id,
+        c1_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
         p1_0.telefono 
     from
         professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
     where
         p1_0.id=?
 Hibernate: 
@@ -238,13 +250,17 @@ Hibernate:
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c1_0.id,
+        c1_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
         p1_0.telefono 
     from
         professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
     where
         p1_0.id=?
 Hibernate: 
@@ -258,7 +274,8 @@ Hibernate:
         r1_0.description,
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c2_0.id,
+        c2_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
@@ -271,6 +288,9 @@ Hibernate:
     left join
         professionals p1_0 
             on p1_0.id=r1_0.professional_id 
+    left join
+        category c2_0 
+            on c2_0.id=p1_0.category_id 
     where
         r1_0.id=?
 Hibernate: 
@@ -302,13 +322,17 @@ Hibernate:
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c1_0.id,
+        c1_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
         p1_0.telefono 
     from
         professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
     where
         p1_0.id=?
 Hibernate: 
@@ -322,7 +346,8 @@ Hibernate:
         r1_0.description,
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c2_0.id,
+        c2_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
@@ -335,6 +360,9 @@ Hibernate:
     left join
         professionals p1_0 
             on p1_0.id=r1_0.professional_id 
+    left join
+        category c2_0 
+            on c2_0.id=p1_0.category_id 
     where
         r1_0.id=?
 Hibernate: 
@@ -352,13 +380,17 @@ Hibernate:
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c1_0.id,
+        c1_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
         p1_0.telefono 
     from
         professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
     where
         p1_0.id=?
 Hibernate: 
@@ -379,7 +411,8 @@ Hibernate:
         r1_0.description,
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c2_0.id,
+        c2_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
@@ -392,6 +425,9 @@ Hibernate:
     left join
         professionals p1_0 
             on p1_0.id=r1_0.professional_id 
+    left join
+        category c2_0 
+            on c2_0.id=p1_0.category_id 
     where
         r1_0.id=?
 Hibernate: 
@@ -417,13 +453,17 @@ Hibernate:
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c1_0.id,
+        c1_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
         p1_0.telefono 
     from
         professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
     where
         p1_0.id=?
 Hibernate: 
@@ -441,13 +481,17 @@ Hibernate:
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c1_0.id,
+        c1_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
         p1_0.telefono 
     from
         professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
     where
         p1_0.id=?
 Hibernate: 
@@ -461,7 +505,8 @@ Hibernate:
         r1_0.description,
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c2_0.id,
+        c2_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
@@ -474,6 +519,9 @@ Hibernate:
     left join
         professionals p1_0 
             on p1_0.id=r1_0.professional_id 
+    left join
+        category c2_0 
+            on c2_0.id=p1_0.category_id 
     where
         r1_0.id=?
 Hibernate: 
@@ -487,7 +535,8 @@ Hibernate:
         r1_0.description,
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c2_0.id,
+        c2_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
@@ -500,6 +549,9 @@ Hibernate:
     left join
         professionals p1_0 
             on p1_0.id=r1_0.professional_id 
+    left join
+        category c2_0 
+            on c2_0.id=p1_0.category_id 
     where
         r1_0.id=?
 Hibernate: 
@@ -513,7 +565,8 @@ Hibernate:
         r1_0.description,
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c2_0.id,
+        c2_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
@@ -526,6 +579,9 @@ Hibernate:
     left join
         professionals p1_0 
             on p1_0.id=r1_0.professional_id 
+    left join
+        category c2_0 
+            on c2_0.id=p1_0.category_id 
     where
         r1_0.id=?
 Hibernate: 
@@ -553,13 +609,17 @@ Hibernate:
     select
         p1_0.id,
         p1_0.area_trabajo,
-        p1_0.categoria,
+        c1_0.id,
+        c1_0.name,
         p1_0.edad,
         p1_0.email,
         p1_0.name,
         p1_0.telefono 
     from
         professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
     where
         p1_0.id=?
 </pre>
@@ -573,7 +633,7 @@ Hibernate:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at 8 jul. 2023 21:57:51</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at 15 jul. 2023 18:28:36</p>
 </div>
 </div>
 </body>

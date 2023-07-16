@@ -1,0 +1,32 @@
+|===
+|Path|Type|Description
+
+|`+name+`
+|`+String+`
+|nombre del profesional
+
+|`+edad+`
+|`+Number+`
+|edad del profesional
+
+|`+telefono+`
+|`+String+`
+|telefono del profesional
+
+|`+email+`
+|`+String+`
+|correo electronico del profesional
+
+|`+areaTrabajo+`
+|`+String+`
+|area de trabajo del profesional
+
+|`+category+`
+|`+Object+`
+|categoria del professional
+
+|`+employmentContracts+`
+|`+Array+`
+|contratos del profesional con el cliente
+
+|===

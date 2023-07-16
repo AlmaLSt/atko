@@ -1,8 +1,8 @@
 package org.bedu.atko.controller;
 
 import jakarta.validation.Valid;
-import org.bedu.atko.dto.Category.CreateCategoryDTO;
-import org.bedu.atko.dto.Category.UpdateCategoryDTO;
+import org.bedu.atko.dto.category.CreateCategoryDTO;
+import org.bedu.atko.dto.category.UpdateCategoryDTO;
 import org.bedu.atko.dto.CategoryDTO;
 import org.bedu.atko.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class CategoryController {
 
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<CategoryDTO> findBYId(@PathVariable("id") long id){
+    public Optional<CategoryDTO> findByID(@PathVariable("id") long id){
         return service.findById(id);
     }
 

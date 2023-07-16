@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.bedu.atko.controller.CategoryControllerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-07-15T23:28:17" hostname="LAPTOP-6DH68450" time="2.287">
+  <properties/>
+  <testcase name="elimina una categoría" classname="org.bedu.atko.controller.CategoryControllerTest" time="0.685"/>
+  <testcase name="obtiene todas las categorías" classname="org.bedu.atko.controller.CategoryControllerTest" time="0.801"/>
+  <testcase name="actualiza una categoría" classname="org.bedu.atko.controller.CategoryControllerTest" time="0.224"/>
+  <testcase name="obtiene una categoría por su id" classname="org.bedu.atko.controller.CategoryControllerTest" time="0.076"/>
+  <testcase name="guarda una categoría" classname="org.bedu.atko.controller.CategoryControllerTest" time="0.476"/>
+  <system-out><![CDATA[18:28:05.384 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.bedu.atko.controller.CategoryControllerTest]: CategoryControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:28:05.776 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.controller.CategoryControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2023-07-15T18:28:07.142-05:00  INFO 10252 --- [    Test worker] o.b.a.controller.CategoryControllerTest  : Starting CategoryControllerTest using Java 17.0.2 with PID 10252 (started by jacor in D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura\akto-main)
+2023-07-15T18:28:07.148-05:00  INFO 10252 --- [    Test worker] o.b.a.controller.CategoryControllerTest  : No active profile set, falling back to 1 default profile: "default"
+2023-07-15T18:28:17.134-05:00  INFO 10252 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-07-15T18:28:17.137-05:00  INFO 10252 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-07-15T18:28:17.150-05:00  INFO 10252 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2023-07-15T18:28:17.269-05:00  INFO 10252 --- [    Test worker] o.b.a.controller.CategoryControllerTest  : Started CategoryControllerTest in 11.256 seconds (process running for 14.839)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,7 +1,7 @@
 package org.bedu.atko.mapper;
 
-import org.bedu.atko.dto.Category.CreateCategoryDTO;
-import org.bedu.atko.dto.Category.UpdateCategoryDTO;
+import org.bedu.atko.dto.category.CreateCategoryDTO;
+import org.bedu.atko.dto.category.UpdateCategoryDTO;
 import org.bedu.atko.dto.CategoryDTO;
 import org.bedu.atko.entity.Category;
 import org.mapstruct.*;
