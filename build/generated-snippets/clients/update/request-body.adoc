@@ -1,4 +1,4 @@
 [source,json,options="nowrap"]
 ----
-{"name":"Nombre","edad":20,"telefono":"123-456-7890","email":"cliente@contacto.com"}
+{"name":"Nombre","edad":20,"telefono":"123-456-7890","email":"cliente@contacto.com","hired":null}
 ----

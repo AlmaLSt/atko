@@ -1,8 +1,8 @@
 package org.bedu.atko.mapper;
 
 
-import org.bedu.atko.dto.Review.CreateReviewDTO;
-import org.bedu.atko.dto.Review.UpdateReviewDTO;
+import org.bedu.atko.dto.review.CreateReviewDTO;
+import org.bedu.atko.dto.review.UpdateReviewDTO;
 import org.bedu.atko.dto.ReviewDTO;
 import org.bedu.atko.entity.Reviews;
 import org.mapstruct.*;

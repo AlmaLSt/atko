@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClientController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">akto-main</a> &gt; <a href="index.source.html" class="el_package">org.bedu.atko.controller</a> &gt; <span class="el_source">ClientController.java</span></div><h1>ClientController.java</h1><pre class="source lang-java linenums">package org.bedu.atko.controller;
+
+import jakarta.validation.Valid;
+import org.bedu.atko.dto.client.CreateClientDTO;
+import org.bedu.atko.dto.client.UpdateClientDTO;
+import org.bedu.atko.dto.ClientDTO;
+import org.bedu.atko.service.IClientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping(&quot;clients&quot;)
+public class ClientController {
+
+    private final IClientService service;
+
+    @Autowired
+<span class="fc" id="L22">    public ClientController(IClientService service) {</span>
+<span class="fc" id="L23">        this.service = service;</span>
+<span class="fc" id="L24">    }</span>
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List&lt;ClientDTO&gt; findAll(){
+<span class="fc" id="L29">        return service.findAll();</span>
+    }
+
+    @GetMapping(&quot;{id}&quot;)
+    @ResponseStatus(HttpStatus.OK)
+    public Optional&lt;ClientDTO&gt; findByID(@PathVariable(&quot;id&quot;) long id){
+<span class="fc" id="L35">        return service.findById(id);</span>
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public ClientDTO save(@Valid @RequestBody CreateClientDTO data){
+<span class="fc" id="L41">        return service.save(data);</span>
+    }
+
+    @PutMapping(&quot;{id}&quot;)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void update(@RequestBody UpdateClientDTO data, @PathVariable(&quot;id&quot;) long id){
+<span class="fc" id="L47">        service.update(id, data);</span>
+<span class="fc" id="L48">    }</span>
+
+
+    @DeleteMapping(&quot;{id}&quot;)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable(&quot;id&quot;) long id){
+<span class="fc" id="L54">        service.delete(id);</span>
+<span class="fc" id="L55">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

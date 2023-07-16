@@ -1,12 +1,9 @@
-package org.bedu.atko.dto.Review;
+package org.bedu.atko.dto.review;
 
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.bedu.atko.entity.Client;
 import org.bedu.atko.entity.Professional;
 @Data

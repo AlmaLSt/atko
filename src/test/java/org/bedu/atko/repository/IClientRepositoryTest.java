@@ -56,7 +56,7 @@ class IClientRepositoryTest {
     @DisplayName("Guarda un cliente")
     void save(){
         client = clientRepository.save(client);
-        assertNotNull(client.getId());
+        assertNotNull((Long) client.getId());
     }
 
     @Test

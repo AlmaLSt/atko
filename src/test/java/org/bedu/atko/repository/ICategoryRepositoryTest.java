@@ -21,19 +21,34 @@ import static org.junit.jupiter.api.Assertions.*;
 class ICategoryRepositoryTest {
 
     @Autowired
+    private IProfessionalRepository professionalRepository;
+    @Autowired
     private ICategoryRepository categoryRepository;
+    @Autowired
+    private IClientRepository clientRepository;
+    @Autowired
+    private IReviewRepository reviewRepository;
 
     Category category;
 
     @BeforeAll
     void setUp(){
+        reviewRepository.deleteAll();
+        professionalRepository.deleteAll();
+        categoryRepository.deleteAll();
+        clientRepository.deleteAll();
+
         category = new Category();
         category.setName("Mecánica");
     }
 
     @AfterAll
     void cleanUp(){
+
+        reviewRepository.deleteAll();
+        professionalRepository.deleteAll();
         categoryRepository.deleteAll();
+        clientRepository.deleteAll();
     }
 
     @Test
@@ -55,7 +70,7 @@ class ICategoryRepositoryTest {
     @DisplayName("Should save a new category")
     void save(){
         category = categoryRepository.save(category);
-        assertNotNull(category.getId());
+        assertNotNull((Long) category.getId());
     }
 
     @Test
@@ -67,7 +82,7 @@ class ICategoryRepositoryTest {
 
         updatedCategory = categoryRepository.save(updatedCategory);
 
-        assertEquals(updatedCategory.getName(), "Mecánica Automotriz");
+        assertEquals( "Mecánica Automotriz",updatedCategory.getName());
     }
 
     @Test

@@ -1,7 +1,10 @@
 package org.bedu.atko.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Set;
 
@@ -9,7 +12,6 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "clients")
 public class Client {
@@ -30,6 +32,6 @@ public class Client {
     private String email;
 
     @ManyToMany(mappedBy = "employmentContracts")
-    Set<Professional> hired;
+    private Set<Professional> hired;
 }
 

@@ -1,8 +1,8 @@
 package org.bedu.atko.controller;
 
 import jakarta.validation.Valid;
-import org.bedu.atko.dto.Client.CreateClientDTO;
-import org.bedu.atko.dto.Client.UpdateClientDTO;
+import org.bedu.atko.dto.client.CreateClientDTO;
+import org.bedu.atko.dto.client.UpdateClientDTO;
 import org.bedu.atko.dto.ClientDTO;
 import org.bedu.atko.service.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;

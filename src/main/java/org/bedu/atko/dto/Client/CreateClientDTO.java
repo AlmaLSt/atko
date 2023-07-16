@@ -1,12 +1,10 @@
-package org.bedu.atko.dto.Client;
+package org.bedu.atko.dto.client;
 
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-import org.hibernate.validator.constraints.Length;
+import lombok.*;
+import org.bedu.atko.entity.Professional;
 
+import java.util.Set;
 @Data
 @Builder
 @AllArgsConstructor
@@ -24,5 +22,7 @@ public class CreateClientDTO {
 
     @Email
     private String email;
+
+    private Set<Professional> hired;
 
 }

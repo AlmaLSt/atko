@@ -1,15 +1,15 @@
 package org.bedu.atko.mapper;
 
 import javax.annotation.processing.Generated;
-import org.bedu.atko.dto.Review.CreateReviewDTO;
-import org.bedu.atko.dto.Review.UpdateReviewDTO;
 import org.bedu.atko.dto.ReviewDTO;
+import org.bedu.atko.dto.review.CreateReviewDTO;
+import org.bedu.atko.dto.review.UpdateReviewDTO;
 import org.bedu.atko.entity.Reviews;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-08T21:48:56-0500",
+    date = "2023-07-15T18:34:39-0500",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.6.jar, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component

@@ -1,8 +1,8 @@
 package org.bedu.atko.controller;
 
 import jakarta.validation.Valid;
-import org.bedu.atko.dto.Review.CreateReviewDTO;
-import org.bedu.atko.dto.Review.UpdateReviewDTO;
+import org.bedu.atko.dto.review.CreateReviewDTO;
+import org.bedu.atko.dto.review.UpdateReviewDTO;
 import org.bedu.atko.dto.ReviewDTO;
 import org.bedu.atko.service.IReviewServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +30,8 @@ public class ReviewController {
 
     @GetMapping("{professional_id}")
     @ResponseStatus(HttpStatus.OK)
-    public List<ReviewDTO> findByProfessional(@PathVariable(name = "professional_id") long professional_id){
-        return services.getByProfessional(professional_id);
+    public List<ReviewDTO> findByProfessional(@PathVariable(name = "professional_id") long professionalId){
+        return services.getByProfessional(professionalId);
     }
 
     @PostMapping
@@ -42,14 +42,14 @@ public class ReviewController {
 
     @PutMapping("{review_id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void update(@RequestBody UpdateReviewDTO reviews, @PathVariable(name = "review_id") long review_id){
-        services.update(reviews, review_id);
+    public void update(@RequestBody UpdateReviewDTO reviews, @PathVariable(name = "review_id") long reviewId){
+        services.update(reviews, reviewId);
     }
 
     @DeleteMapping("{review_id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable(name = "review_id") long review_id){
-        services.delete(review_id);
+    public void delete(@PathVariable(name = "review_id") long reviewId){
+        services.delete(reviewId);
     }
 
 }
