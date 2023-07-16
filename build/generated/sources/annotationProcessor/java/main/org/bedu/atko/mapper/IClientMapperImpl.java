@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-15T18:34:39-0500",
+    date = "2023-07-16T14:15:36-0500",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.6.jar, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
@@ -45,18 +45,18 @@ public class IClientMapperImpl implements IClientMapper {
             return null;
         }
 
-        Client client = new Client();
+        Client.ClientBuilder client = Client.builder();
 
-        client.setName( data.getName() );
-        client.setEdad( data.getEdad() );
-        client.setTelefono( data.getTelefono() );
-        client.setEmail( data.getEmail() );
+        client.name( data.getName() );
+        client.edad( data.getEdad() );
+        client.telefono( data.getTelefono() );
+        client.email( data.getEmail() );
         Set<Professional> set = data.getHired();
         if ( set != null ) {
-            client.setHired( new LinkedHashSet<Professional>( set ) );
+            client.hired( new LinkedHashSet<Professional>( set ) );
         }
 
-        return client;
+        return client.build();
     }
 
     @Override

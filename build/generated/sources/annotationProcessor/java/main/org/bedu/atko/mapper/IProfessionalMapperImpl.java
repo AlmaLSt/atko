@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-15T18:34:39-0500",
+    date = "2023-07-16T14:15:35-0500",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.6.jar, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
@@ -47,20 +47,20 @@ public class IProfessionalMapperImpl implements IProfessionalMapper {
             return null;
         }
 
-        Professional professional = new Professional();
+        Professional.ProfessionalBuilder professional = Professional.builder();
 
-        professional.setName( data.getName() );
-        professional.setEdad( data.getEdad() );
-        professional.setTelefono( data.getTelefono() );
-        professional.setEmail( data.getEmail() );
-        professional.setAreaTrabajo( data.getAreaTrabajo() );
-        professional.setCategory( data.getCategory() );
+        professional.name( data.getName() );
+        professional.edad( data.getEdad() );
+        professional.telefono( data.getTelefono() );
+        professional.email( data.getEmail() );
+        professional.areaTrabajo( data.getAreaTrabajo() );
+        professional.category( data.getCategory() );
         Set<Client> set = data.getEmploymentContracts();
         if ( set != null ) {
-            professional.setEmploymentContracts( new LinkedHashSet<Client>( set ) );
+            professional.employmentContracts( new LinkedHashSet<Client>( set ) );
         }
 
-        return professional;
+        return professional.build();
     }
 
     @Override

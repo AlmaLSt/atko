@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-15T18:34:39-0500",
+    date = "2023-07-16T14:15:34-0500",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.6.jar, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
@@ -35,11 +35,11 @@ public class ICategoryMapperImpl implements ICategoryMapper {
             return null;
         }
 
-        Category category = new Category();
+        Category.CategoryBuilder category = Category.builder();
 
-        category.setName( data.getName() );
+        category.name( data.getName() );
 
-        return category;
+        return category.build();
     }
 
     @Override
