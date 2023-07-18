@@ -11,6 +11,7 @@
   </div>
   
 - [Alma Lovera](https://github.com/almalst)
+- [José Ángel Cordoba](https://github.com/jacordobag)
 
 <div align="center">
   
@@ -40,20 +41,6 @@ de distintas profesiones y servicios y así poderse poner en contacto con ellos 
 
 <div align="center">
   
-  ## Endpoints
-  
-   
-</div>
-    
-    
-
-
-
-
-
-https://github.com/AlmaLSt/atko/assets/97720817/05e885c2-1c89-4771-85ed-5dbbeed8be75
-
-
 
 
 (<a href="#readme-top">back to top</a>)</p>
