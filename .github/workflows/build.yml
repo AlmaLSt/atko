@@ -3,6 +3,19 @@ name: Integracion Continua
 
 # Los pasos para ejecutar el pipeline
 jobs:
+  create-database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/mysql@v1
+        with:
+          host: localhost
+          user: root
+          password: root
+          database: atko
+        run: |
+          CREATE DATABASE atko;
+
   build-test:
     runs-on: ubuntu-latest
 
