@@ -1,21 +1,29 @@
 # El nombre que recibe el pipeline
 name: Integracion Continua
 
+env:
+  MYSQL_DATABASE: atko
+  DB_USER: root
+  DB_PASSWORD: root
 
 # Los pasos para ejecutar el pipeline
 jobs:
   create-database:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/mysql@v1
-        with:
-          host: localhost
-          user: root
-          password: root
-          database: atko
+      - name: 🔥 Initialize MySQL
+        run: sudo systemctl start mysql.service
+
+      - name: 📌 Initialize first database
         run: |
-          CREATE DATABASE atko;
+          mysql -e 'CREATE DATABASE ${{ env.MYSQL_DATABASE }};' \
+          -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
+
+      - name: 🚀 Boost user
+        run: |
+          mysql -e "ALTER USER '${{ env.DB_USER }}'@'localhost' \
+          IDENTIFIED WITH mysql_native_password BY 'root';" \
+          -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
 
       - name: Clonar el repositorio
         uses: actions/checkout@v2
