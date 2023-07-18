@@ -1,0 +1,6 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/api/v1/reviews' -i -X POST \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -d '{"professional":{"id":1,"name":"prueba","edad":30,"telefono":"123-456-7890","email":"a@a.com","areaTrabajo":"plomero","category":{"id":0,"name":"construcción"},"employmentContracts":null},"clients":{"id":1,"name":"Prueba de cliente","edad":24,"telefono":"123-456-7890","email":"pruebacliente@prueba.p","hired":[{"id":1,"name":"prueba","edad":30,"telefono":"123-456-7890","email":"a@a.com","areaTrabajo":"plomero","category":{"id":0,"name":"construcción"},"employmentContracts":null}]},"description":"prueba review1"}'
+----

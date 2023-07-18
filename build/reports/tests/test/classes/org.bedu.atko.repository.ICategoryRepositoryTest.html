@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ICategoryRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ICategoryRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.bedu.atko.repository.html">org.bedu.atko.repository</a> &gt; ICategoryRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.316s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should delete a category</td>
+<td class="success">delete()</td>
+<td class="success">0.061s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should get all categories</td>
+<td class="success">findAll()</td>
+<td class="success">0.040s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should get category by id</td>
+<td class="success">findById()</td>
+<td class="success">0.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should save a new category</td>
+<td class="success">save()</td>
+<td class="success">0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should update a category</td>
+<td class="success">update()</td>
+<td class="success">0.156s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-07-16T14:16:21.984-05:00  INFO 23096 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.bedu.atko.repository.ICategoryRepositoryTest]: ICategoryRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-07-16T14:16:22.004-05:00  INFO 23096 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.repository.ICategoryRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2023-07-16T14:16:22.058-05:00  INFO 23096 --- [    Test worker] o.b.a.r.ICategoryRepositoryTest          : Starting ICategoryRepositoryTest using Java 17.0.2 with PID 23096 (started by jacor in D:\bedu\fase3\modulo2\proyecto\atko-relationships-cobertura-servicios\akto-main)
+2023-07-16T14:16:22.059-05:00  INFO 23096 --- [    Test worker] o.b.a.r.ICategoryRepositoryTest          : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-07-16T14:16:22.899-05:00  INFO 23096 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-16T14:16:23.055-05:00  INFO 23096 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 4 JPA repository interfaces.
+2023-07-16T14:16:23.976-05:00  INFO 23096 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-16T14:16:24.512-05:00  INFO 23096 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-07-16T14:16:24.524-05:00  INFO 23096 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-16T14:16:25.547-05:00  INFO 23096 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T14:16:25.591-05:00  INFO 23096 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-16T14:16:25.686-05:00  INFO 23096 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-16T14:16:27.359-05:00  INFO 23096 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ab433a7
+2023-07-16T14:16:27.370-05:00  INFO 23096 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-16T14:16:27.603-05:00  INFO 23096 --- [    Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-07-16T14:16:27.608-05:00  WARN 23096 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-16T14:16:29.216-05:00  INFO 23096 --- [    Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-16T14:16:32.978-05:00  INFO 23096 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-16T14:16:33.671-05:00  INFO 23096 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-16T14:16:36.918-05:00  WARN 23096 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-16T14:16:37.582-05:00  INFO 23096 --- [    Test worker] o.b.a.r.ICategoryRepositoryTest          : Started ICategoryRepositoryTest in 15.565 seconds (process running for 38.964)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.clients_id,
+        r1_0.description,
+        r1_0.professional_id 
+    from
+        reviews r1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    delete 
+    from
+        reviews 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        reviews 
+    where
+        id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        next_val as id_val 
+    from
+        category_seq for update
+Hibernate: 
+    update
+        category_seq 
+    set
+        next_val= ? 
+    where
+        next_val=?
+Hibernate: 
+    insert 
+    into
+        category
+        (name,id) 
+    values
+        (?,?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    update
+        category 
+    set
+        name=? 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    update
+        category 
+    set
+        name=? 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.clients_id,
+        r1_0.description,
+        r1_0.professional_id 
+    from
+        reviews r1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 16 jul. 2023 14:16:42</p>
+</div>
+</div>
+</body>
+</html>

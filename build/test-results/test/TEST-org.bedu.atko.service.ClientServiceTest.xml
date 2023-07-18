@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.bedu.atko.service.ClientServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-07-16T19:16:40" hostname="LAPTOP-6DH68450" time="0.342">
+  <properties/>
+  <testcase name="Should update client" classname="org.bedu.atko.service.ClientServiceTest" time="0.307"/>
+  <testcase name="Should delete a client" classname="org.bedu.atko.service.ClientServiceTest" time="0.006"/>
+  <testcase name="Should find client by id" classname="org.bedu.atko.service.ClientServiceTest" time="0.008"/>
+  <testcase name="Should save a client" classname="org.bedu.atko.service.ClientServiceTest" time="0.006"/>
+  <testcase name="Should find all clients" classname="org.bedu.atko.service.ClientServiceTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

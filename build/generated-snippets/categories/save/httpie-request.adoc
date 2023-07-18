@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ echo '{"name":"Nombre"}' | http POST 'http://localhost:8080/api/v1/categories' \
+    'Content-Type:application/json;charset=UTF-8'
+----

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.bedu.atko.service.ReviewServicesTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-07-16T19:16:41" hostname="LAPTOP-6DH68450" time="0.316">
+  <properties/>
+  <testcase name="Should update a review" classname="org.bedu.atko.service.ReviewServicesTest" time="0.273"/>
+  <testcase name="Should delete a review" classname="org.bedu.atko.service.ReviewServicesTest" time="0.004"/>
+  <testcase name="Should save a review" classname="org.bedu.atko.service.ReviewServicesTest" time="0.004"/>
+  <testcase name="Should find review by id" classname="org.bedu.atko.service.ReviewServicesTest" time="0.007"/>
+  <testcase name="Should find all reviews" classname="org.bedu.atko.service.ReviewServicesTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

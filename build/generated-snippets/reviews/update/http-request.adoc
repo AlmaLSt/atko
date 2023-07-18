@@ -1,0 +1,9 @@
+[source,http,options="nowrap"]
+----
+PUT /api/v1/reviews/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 518
+Host: localhost:8080
+
+{"professional":{"id":1,"name":"prueba","edad":30,"telefono":"123-456-7890","email":"a@a.com","areaTrabajo":"plomero","category":{"id":0,"name":"construcción"},"employmentContracts":null},"clients":{"id":1,"name":"Prueba de cliente","edad":24,"telefono":"123-456-7890","email":"pruebacliente@prueba.p","hired":[{"id":1,"name":"prueba","edad":30,"telefono":"123-456-7890","email":"a@a.com","areaTrabajo":"plomero","category":{"id":0,"name":"construcción"},"employmentContracts":null}]},"description":"prueba review1"}
+----

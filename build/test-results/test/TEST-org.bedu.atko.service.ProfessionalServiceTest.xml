@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.bedu.atko.service.ProfessionalServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-07-16T19:16:41" hostname="LAPTOP-6DH68450" time="0.266">
+  <properties/>
+  <testcase name="Should find all professionals" classname="org.bedu.atko.service.ProfessionalServiceTest" time="0.243"/>
+  <testcase name="Should save a professioal" classname="org.bedu.atko.service.ProfessionalServiceTest" time="0.005"/>
+  <testcase name="Should delete a professional" classname="org.bedu.atko.service.ProfessionalServiceTest" time="0.004"/>
+  <testcase name="Should update a professional" classname="org.bedu.atko.service.ProfessionalServiceTest" time="0.005"/>
+  <testcase name="Should find professional by id" classname="org.bedu.atko.service.ProfessionalServiceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

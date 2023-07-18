@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 320
+
+[{"id":1,"name":"Nombre","edad":20,"telefono":"123-456-7890","email":"cliente@contacto.com","hired":null},{"id":2,"name":"Nombre2","edad":21,"telefono":"123-456-7890","email":"cliente2@contacto.com","hired":null},{"id":3,"name":"Nombre3","edad":22,"telefono":"123-456-7890","email":"cliente3@contacto.com","hired":null}]
+----

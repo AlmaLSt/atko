@@ -1,0 +1,8 @@
+.+/api/v1/clients/{id}+
+|===
+|Parameter|Description
+
+|`+id+`
+|Identificador del cliente
+
+|===

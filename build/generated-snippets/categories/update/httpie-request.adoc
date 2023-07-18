@@ -1,0 +1,5 @@
+[source,bash]
+----
+$ echo '{"name":"Nombre"}' | http PUT 'http://localhost:8080/api/v1/categories/1' \
+    'Content-Type:application/json;charset=UTF-8'
+----

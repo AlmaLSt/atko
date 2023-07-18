@@ -1,0 +1,28 @@
+|===
+|Path|Type|Description
+
+|`+[].id+`
+|`+Number+`
+|identificador del cliente
+
+|`+[].name+`
+|`+String+`
+|nombre del cliente
+
+|`+[].edad+`
+|`+Number+`
+|edad del cliente
+
+|`+[].telefono+`
+|`+String+`
+|telefono del cliente
+
+|`+[].email+`
+|`+String+`
+|correo electronico del cliente
+
+|`+[].hired+`
+|`+Null+`
+|datos del contrante
+
+|===

@@ -2,10 +2,9 @@ package org.bedu.atko.controller;
 
 import jakarta.validation.Valid;
 
-import org.bedu.atko.dto.Professional.CreateProfessionalDTO;
-import org.bedu.atko.dto.Professional.UpdateProfessionalDTO;
+import org.bedu.atko.dto.professional.CreateProfessionalDTO;
+import org.bedu.atko.dto.professional.UpdateProfessionalDTO;
 import org.bedu.atko.dto.ProfessionalDTO;
-import org.bedu.atko.entity.Professional;
 import org.bedu.atko.service.IProfessionalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,7 +32,7 @@ public class ProfessionalController {
 
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Optional<ProfessionalDTO> findBYId(@PathVariable("id") long id){
+    public Optional<ProfessionalDTO> findByID(@PathVariable("id") long id){
         return service.findById(id);
     }
 

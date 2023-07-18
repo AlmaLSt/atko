@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - IProfessionalRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>IProfessionalRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.bedu.atko.repository.html">org.bedu.atko.repository</a> &gt; IProfessionalRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.221s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should delete a professional</td>
+<td class="success">delete()</td>
+<td class="success">0.081s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should get all professionals</td>
+<td class="success">findAll()</td>
+<td class="success">0.086s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should get a professinal by id</td>
+<td class="success">findById()</td>
+<td class="success">0.033s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should save a new professional</td>
+<td class="success">save()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-07-16T14:16:39.239-05:00  INFO 23096 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.bedu.atko.repository.IProfessionalRepositoryTest]: IProfessionalRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-07-16T14:16:39.241-05:00  INFO 23096 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.repository.IProfessionalRepositoryTest
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.clients_id,
+        r1_0.description,
+        r1_0.professional_id 
+    from
+        reviews r1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        category
+        (name,id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        category
+        (name,id) 
+    values
+        (?,?)
+Hibernate: 
+    insert 
+    into
+        professionals
+        (area_trabajo,category_id,edad,email,name,telefono) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        professionals
+        (area_trabajo,category_id,edad,email,name,telefono) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        clients
+        (edad,email,name,telefono) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    insert 
+    into
+        clients
+        (edad,email,name,telefono) 
+    values
+        (?,?,?,?)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    insert 
+    into
+        professionals
+        (area_trabajo,category_id,edad,email,name,telefono) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    insert 
+    into
+        professionals
+        (area_trabajo,category_id,edad,email,name,telefono) 
+    values
+        (?,?,?,?,?,?)
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        c1_0.id,
+        c1_0.name,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0 
+    left join
+        category c1_0 
+            on c1_0.id=p1_0.category_id 
+    where
+        p1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.clients_id,
+        r1_0.description,
+        r1_0.professional_id 
+    from
+        reviews r1_0
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.area_trabajo,
+        p1_0.category_id,
+        p1_0.edad,
+        p1_0.email,
+        p1_0.name,
+        p1_0.telefono 
+    from
+        professionals p1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        c1_0.id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        contrataciones 
+    where
+        professional_id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        professionals 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        category 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.edad,
+        c1_0.email,
+        c1_0.name,
+        c1_0.telefono 
+    from
+        clients c1_0
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        clients 
+    where
+        id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at 16 jul. 2023 14:16:42</p>
+</div>
+</div>
+</body>
+</html>

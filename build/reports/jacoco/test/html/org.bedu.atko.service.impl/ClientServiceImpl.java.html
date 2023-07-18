@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ClientServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">akto-main</a> &gt; <a href="index.source.html" class="el_package">org.bedu.atko.service.impl</a> &gt; <span class="el_source">ClientServiceImpl.java</span></div><h1>ClientServiceImpl.java</h1><pre class="source lang-java linenums">package org.bedu.atko.service.impl;
+
+import org.bedu.atko.dto.client.CreateClientDTO;
+import org.bedu.atko.dto.client.UpdateClientDTO;
+import org.bedu.atko.dto.ClientDTO;
+import org.bedu.atko.exception.ClientNotFoundException;
+import org.bedu.atko.mapper.IClientMapper;
+import org.bedu.atko.entity.Client;
+import org.bedu.atko.repository.IClientRepository;
+import org.bedu.atko.service.IClientService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class ClientServiceImpl implements IClientService {
+
+    private IClientRepository repository;
+    private IClientMapper mapper;
+
+    @Autowired
+<span class="fc" id="L24">    public ClientServiceImpl(IClientRepository repository, IClientMapper mapper){</span>
+<span class="fc" id="L25">        this.repository = repository;</span>
+<span class="fc" id="L26">        this.mapper = mapper;</span>
+<span class="fc" id="L27">    }</span>
+
+
+    public List&lt;ClientDTO&gt; findAll() {
+<span class="fc" id="L31">        List&lt;Client&gt; clients = repository.findAll();</span>
+<span class="fc" id="L32">        return clients.stream().map(mapper::toDTO).toList();</span>
+    }
+
+
+    public Optional&lt;ClientDTO&gt; findById(long id) {
+<span class="fc" id="L37">        Optional&lt;Client&gt; client = repository.findById(id);</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        return client.isPresent() ? Optional.of(mapper.toDTO(client.get())) : Optional.of(null);</span>
+    }
+
+
+    public ClientDTO save(CreateClientDTO data) {
+<span class="fc" id="L43">        Client entity = repository.save(mapper.toModel(data));</span>
+<span class="fc" id="L44">        return mapper.toDTO(entity);</span>
+    }
+
+
+    public void update(long id, UpdateClientDTO data) {
+<span class="fc" id="L49">        Optional&lt;Client&gt; current = repository.findById(id);</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        if(!current.isPresent()){</span>
+<span class="fc" id="L51">            throw new ClientNotFoundException();</span>
+        }
+<span class="nc" id="L53">        Client client = current.get();</span>
+<span class="nc" id="L54">        mapper.toModel(client, data);</span>
+<span class="nc" id="L55">        repository.save(client);</span>
+
+<span class="nc" id="L57">    }</span>
+
+
+    public void delete(long id) {
+<span class="fc" id="L61">        repository.deleteById(id);</span>
+
+<span class="fc" id="L63">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -1,0 +1,393 @@
+= Proyecto ATKO
+Alma Lovera - José Ángel Córdoba -- 1.0.0;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+:sectnums:
+
+[[resumen]]
+= Resumen
+Este proyecto muestra el desarrollo de un API usando Spring Framework, con sus módulos Spring Boot, Spring Data JPA y Spring REST Docs.
+
+
+[[verbos-http]]
+== Verbos HTTP
+
+Este proyecto trata de adherirse lo más posible al estándar RESTful aprovechando las capacidades del protocolo de HTTP
+y siguiendo las convenciones HTTP en su uso de los verbos HTTP.
+
+|===
+| Verbo | Uso
+
+| `GET`
+| Recuperar un recurso
+
+| `POST`
+| Crea un nuevo recurso
+
+| `PUT`
+| Actualizar un recurso existente, incluyendo actualizaciones parciales
+
+| `DELETE`
+| Eliminar un recurso existente
+|===
+
+Este proyecto trata de adherirse lo más posible al estándar RESTful en el uso de los códigos de estátus HTTP.
+
+|===
+| Code | uso
+
+| `200 OK`
+| La petición se completó exitosamente
+
+| `201 Created`
+| Se creó un nuevo recurso. La URL del reurso está disponible en la cabecera `Location` de la respuesta
+
+| `204 No Content`
+| Se aplicó correctamente la actualización de un recurso
+
+| `400 Bad Request`
+| La petición está formada de forma incorrecta. El cuerpo de la respuesta incluirá el error, proporcionando más información
+
+| `404 Not Found`
+| El recurso especificado no existe
+|===
+
+[[Profesionales]]
+== Profesionales
+
+
+=== Get profesional por Id
+Obtiene un profesional específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/professionals/findByID/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/professionals/findByID/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/professionals/findByID/curl-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/professionals/findByID/path-parameters.adoc[]
+
+
+=== Get profesionales
+Obtiene todos los profesionales.
+
+==== Ejemplo de petición
+include::{snippets}/professionals/findAll/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/professionals/findAll/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/professionals/findAll/curl-request.adoc[]
+
+
+
+=== POST nuevo profesional
+Crea un nuevo profesional
+
+==== Ejemplo de petición
+include::{snippets}/professionals/save/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/professionals/save/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/professionals/save/curl-request.adoc[]
+
+
+
+
+=== PUT  profesional
+Actualiza un profesional existente.
+
+==== Ejemplo de petición
+include::{snippets}/professionals/update/http-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/professionals/update/path-parameters.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/professionals/update/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/professionals/update/curl-request.adoc[]
+
+
+
+
+
+
+=== DELETE profesional por Id
+Elimina un profesional específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/professionals/delete-professional/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/professionals/delete-professional/http-response.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/professionals/delete-professional/path-parameters.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/professionals/delete-professional/curl-request.adoc[]
+
+[[clientes]]
+== Clientes
+
+
+=== Get cliente por Id
+Obtiene un cliente específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/clients/findByID/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clients/findByID/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clients/findByID/curl-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/clients/findByID/path-parameters.adoc[]
+
+
+=== Get clientes
+Obtiene todos los clientes.
+
+==== Ejemplo de petición
+include::{snippets}/clients/findAll/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clients/findAll/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clients/findAll/curl-request.adoc[]
+
+
+
+=== POST nuevo cliente
+Crea un nuevo cliente
+
+==== Ejemplo de petición
+include::{snippets}/clients/save/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clients/save/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clients/save/curl-request.adoc[]
+
+
+
+
+=== PUT  cliente
+Actualiza un cliente existente.
+
+==== Ejemplo de petición
+include::{snippets}/clients/update/http-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/clients/update/path-parameters.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clients/update/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clients/update/curl-request.adoc[]
+
+
+
+
+
+
+=== DELETE cliente por Id
+Elimina un cliente específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/clients/delete-clients/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/clients/delete-clients/http-response.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/clients/delete-clients/path-parameters.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/clients/delete-clients/curl-request.adoc[]
+
+[[reviews]]
+== Reviews
+
+
+=== Get review por Id de un profesional
+Obtiene un review específico usando el identificador único de un profesional.
+
+==== Ejemplo de petición
+include::{snippets}/reviews/findByProfessional/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/reviews/findByProfessional/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/reviews/findByProfessional/curl-request.adoc[]
+
+
+
+=== Get reviews
+Obtiene todos los reviews.
+
+==== Ejemplo de petición
+include::{snippets}/reviews/findAll/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/reviews/findAll/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/reviews/findAll/curl-request.adoc[]
+
+
+
+=== POST nuevo review
+Crea un nuevo review
+
+==== Ejemplo de petición
+include::{snippets}/reviews/save/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/reviews/save/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/reviews/save/curl-request.adoc[]
+
+
+
+
+=== PUT  review
+Actualiza un review existente.
+
+==== Ejemplo de petición
+include::{snippets}/reviews/update/http-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/reviews/update/path-parameters.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/reviews/update/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/reviews/update/curl-request.adoc[]
+
+
+
+
+
+
+=== DELETE review por Id
+Elimina un review específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/reviews/delete-review/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/reviews/delete-review/http-response.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/reviews/delete-review/path-parameters.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/reviews/delete-review/curl-request.adoc[]
+
+
+
+[[Categorías]]
+== Categorías
+
+
+=== Get categoría por Id
+Obtiene un categoría específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/categories/findByID/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/categories/findByID/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/categories/findByID/curl-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/categories/findByID/path-parameters.adoc[]
+
+
+=== Get categorías
+Obtiene todos las categorías.
+
+==== Ejemplo de petición
+include::{snippets}/categories/findAll/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/categories/findAll/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/categories/findAll/curl-request.adoc[]
+
+
+
+=== POST nueva categoría
+Crea un nueva categoría
+
+==== Ejemplo de petición
+include::{snippets}/categories/save/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/categories/save/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/categories/save/curl-request.adoc[]
+
+
+
+
+=== PUT  categoría
+Actualiza una categoría existente.
+
+==== Ejemplo de petición
+include::{snippets}/categories/update/http-request.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/categories/update/path-parameters.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/categories/update/http-response.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/categories/update/curl-request.adoc[]
+
+
+
+
+
+
+=== DELETE categoría por Id
+Elimina una categoría específico usando su identificador único.
+
+==== Ejemplo de petición
+include::{snippets}/categories/delete-categories/http-request.adoc[]
+
+==== Ejemplo de respuesta
+include::{snippets}/categories/delete-categories/http-response.adoc[]
+
+==== Parámetros de la petición
+include::{snippets}/categories/delete-categories/path-parameters.adoc[]
+
+==== Ejemplo usando CURL
+include::{snippets}/categories/delete-categories/curl-request.adoc[]

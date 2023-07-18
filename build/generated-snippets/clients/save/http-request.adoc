@@ -1,0 +1,9 @@
+[source,http,options="nowrap"]
+----
+POST /api/v1/clients HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 97
+Host: localhost:8080
+
+{"name":"Nombre","edad":20,"telefono":"123-456-7890","email":"cliente@contacto.com","hired":null}
+----
