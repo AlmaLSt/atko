@@ -1,6 +1,7 @@
 # El nombre que recibe el pipeline
 name: Integracion Continua
 
+
 # Los pasos para ejecutar el pipeline
 jobs:
   create-database:
@@ -16,10 +17,6 @@ jobs:
         run: |
           CREATE DATABASE atko;
 
-  build-test:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Clonar el repositorio
         uses: actions/checkout@v2
 
