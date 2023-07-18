@@ -26,31 +26,31 @@ public class ProfessionalServiceImpl implements IProfessionalService {
 <span class="fc" id="L26">    }</span>
 
     public List&lt;ProfessionalDTO&gt; findAll(){
-<span class="nc" id="L29">        List&lt;Professional&gt; professionals = repository.findAll();</span>
-<span class="nc" id="L30">        return professionals.stream().map(mapper::toDTO).toList();</span>
+<span class="fc" id="L29">        List&lt;Professional&gt; professionals = repository.findAll();</span>
+<span class="fc" id="L30">        return professionals.stream().map(mapper::toDTO).toList();</span>
     }
 
     public Optional&lt;ProfessionalDTO&gt; findById(long id) {
-<span class="nc" id="L34">        Optional&lt;Professional&gt; professional = repository.findById(id);</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">        return professional.isPresent() ? Optional.of(mapper.toDTO(professional.get())) : Optional.of(null);</span>
+<span class="fc" id="L34">        Optional&lt;Professional&gt; professional = repository.findById(id);</span>
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">        return professional.isPresent() ? Optional.of(mapper.toDTO(professional.get())) : Optional.of(null);</span>
     }
 
     public ProfessionalDTO save(CreateProfessionalDTO data){
-<span class="nc" id="L39">        Professional entity = repository.save(mapper.toModel(data));</span>
-<span class="nc" id="L40">        return mapper.toDTO(entity);</span>
+<span class="fc" id="L39">        Professional entity = repository.save(mapper.toModel(data));</span>
+<span class="fc" id="L40">        return mapper.toDTO(entity);</span>
     }
 
     public void update(long id, UpdateProfessionalDTO data) {
-<span class="nc" id="L44">        Optional&lt;Professional&gt; current = repository.findById(id);</span>
-<span class="nc bnc" id="L45" title="All 2 branches missed.">        if (!current.isPresent()) {</span>
-<span class="nc" id="L46">            throw new ProfessionalNotFoundException();</span>
+<span class="fc" id="L44">        Optional&lt;Professional&gt; current = repository.findById(id);</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">        if (!current.isPresent()) {</span>
+<span class="fc" id="L46">            throw new ProfessionalNotFoundException();</span>
         }
 <span class="nc" id="L48">        Professional professional = current.get();</span>
 <span class="nc" id="L49">        mapper.toModel(professional, data);</span>
 <span class="nc" id="L50">        repository.save(professional);</span>
 <span class="nc" id="L51">    }</span>
     public void delete(long id){
-<span class="nc" id="L53">        repository.deleteById(id);</span>
-<span class="nc" id="L54">    }</span>
+<span class="fc" id="L53">        repository.deleteById(id);</span>
+<span class="fc" id="L54">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

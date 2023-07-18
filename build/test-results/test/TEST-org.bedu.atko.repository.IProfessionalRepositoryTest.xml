@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.bedu.atko.repository.IProfessionalRepositoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-07-15T23:28:34" hostname="LAPTOP-6DH68450" time="0.23">
+<testsuite name="org.bedu.atko.repository.IProfessionalRepositoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-07-16T19:16:39" hostname="LAPTOP-6DH68450" time="0.225">
   <properties/>
-  <testcase name="Should delete a professional" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.12"/>
-  <testcase name="Should get all professionals" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.062"/>
-  <testcase name="Should get a professinal by id" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.028"/>
-  <testcase name="Should save a new professional" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.018"/>
-  <system-out><![CDATA[2023-07-15T18:28:34.576-05:00  INFO 10252 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.bedu.atko.repository.IProfessionalRepositoryTest]: IProfessionalRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-07-15T18:28:34.581-05:00  INFO 10252 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.repository.IProfessionalRepositoryTest
+  <testcase name="Should delete a professional" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.081"/>
+  <testcase name="Should get all professionals" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.086"/>
+  <testcase name="Should get a professinal by id" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.033"/>
+  <testcase name="Should save a new professional" classname="org.bedu.atko.repository.IProfessionalRepositoryTest" time="0.021"/>
+  <system-out><![CDATA[2023-07-16T14:16:39.239-05:00  INFO 23096 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [org.bedu.atko.repository.IProfessionalRepositoryTest]: IProfessionalRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-07-16T14:16:39.241-05:00  INFO 23096 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration org.bedu.atko.AtkoApplication for test class org.bedu.atko.repository.IProfessionalRepositoryTest
 Hibernate: 
     select
         r1_0.id,

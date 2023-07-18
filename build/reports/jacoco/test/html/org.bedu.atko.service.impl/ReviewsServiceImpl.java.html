@@ -28,27 +28,27 @@ public class ReviewsServiceImpl implements IReviewServices {
 
     @Override
     public List&lt;ReviewDTO&gt; getAll() {
-<span class="nc" id="L31">        List&lt;Reviews&gt; reviews = repository.findAll();</span>
-<span class="nc" id="L32">        return reviews.stream().map(mapper::toDTO).toList();</span>
+<span class="fc" id="L31">        List&lt;Reviews&gt; reviews = repository.findAll();</span>
+<span class="fc" id="L32">        return reviews.stream().map(mapper::toDTO).toList();</span>
     }
 
     @Override
     public List&lt;ReviewDTO&gt; getByProfessional(long id) {
-<span class="nc" id="L37">        List&lt;Reviews&gt; reviews = repository.findByProfessional_id(id);</span>
-<span class="nc" id="L38">        return reviews.stream().map(mapper::toDTO).toList();</span>
+<span class="fc" id="L37">        List&lt;Reviews&gt; reviews = repository.findByProfessional_id(id);</span>
+<span class="fc" id="L38">        return reviews.stream().map(mapper::toDTO).toList();</span>
     }
 
     @Override
     public ReviewDTO save(CreateReviewDTO reviews) {
-<span class="nc" id="L43">        Reviews entity = repository.save(mapper.toModel(reviews));</span>
-<span class="nc" id="L44">        return mapper.toDTO(entity);</span>
+<span class="fc" id="L43">        Reviews entity = repository.save(mapper.toModel(reviews));</span>
+<span class="fc" id="L44">        return mapper.toDTO(entity);</span>
     }
 
     @Override
     public void update(UpdateReviewDTO reviews, long id) {
-<span class="nc" id="L49">        Optional&lt;Reviews&gt; current = repository.findById(id);</span>
-<span class="nc bnc" id="L50" title="All 2 branches missed.">        if (!current.isPresent()) {</span>
-<span class="nc" id="L51">            throw new ReviewNotFoundException();</span>
+<span class="fc" id="L49">        Optional&lt;Reviews&gt; current = repository.findById(id);</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        if (!current.isPresent()) {</span>
+<span class="fc" id="L51">            throw new ReviewNotFoundException();</span>
         }
 <span class="nc" id="L53">        Reviews reviews1 = current.get();</span>
 <span class="nc" id="L54">        mapper.toModel(reviews1, reviews);</span>
@@ -57,7 +57,7 @@ public class ReviewsServiceImpl implements IReviewServices {
 
     @Override
     public void delete(long id) {
-<span class="nc" id="L60">        repository.deleteById(id);</span>
-<span class="nc" id="L61">    }</span>
+<span class="fc" id="L60">        repository.deleteById(id);</span>
+<span class="fc" id="L61">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
