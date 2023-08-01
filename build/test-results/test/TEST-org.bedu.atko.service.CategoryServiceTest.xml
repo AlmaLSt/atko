@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.bedu.atko.service.CategoryServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-07-16T19:16:40" hostname="LAPTOP-6DH68450" time="0.812">
+  <properties/>
+  <testcase name="Should delete a category" classname="org.bedu.atko.service.CategoryServiceTest" time="0.519"/>
+  <testcase name="Should find all categories" classname="org.bedu.atko.service.CategoryServiceTest" time="0.253"/>
+  <testcase name="Should save a category" classname="org.bedu.atko.service.CategoryServiceTest" time="0.01"/>
+  <testcase name="Should find category by id" classname="org.bedu.atko.service.CategoryServiceTest" time="0.013"/>
+  <testcase name="Should update a category" classname="org.bedu.atko.service.CategoryServiceTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

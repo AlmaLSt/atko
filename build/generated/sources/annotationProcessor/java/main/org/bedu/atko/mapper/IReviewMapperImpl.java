@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-15T18:34:39-0500",
+    date = "2023-07-16T14:15:36-0500",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.6.jar, environment: Java 17.0.2 (Oracle Corporation)"
 )
 @Component
@@ -37,13 +37,13 @@ public class IReviewMapperImpl implements IReviewMapper {
             return null;
         }
 
-        Reviews reviews = new Reviews();
+        Reviews.ReviewsBuilder reviews = Reviews.builder();
 
-        reviews.setProfessional( data.getProfessional() );
-        reviews.setClients( data.getClients() );
-        reviews.setDescription( data.getDescription() );
+        reviews.professional( data.getProfessional() );
+        reviews.clients( data.getClients() );
+        reviews.description( data.getDescription() );
 
-        return reviews;
+        return reviews.build();
     }
 
     @Override

@@ -30,24 +30,24 @@ public class CategoryServiceImpl implements ICategoryService {
 <span class="fc" id="L30">    }</span>
 
     public List&lt;CategoryDTO&gt; findAll(){
-<span class="nc" id="L33">        List&lt;Category&gt; categories = repository.findAll();</span>
-<span class="nc" id="L34">        return categories.stream().map(mapper::toDTO).toList();</span>
+<span class="fc" id="L33">        List&lt;Category&gt; categories = repository.findAll();</span>
+<span class="fc" id="L34">        return categories.stream().map(mapper::toDTO).toList();</span>
     }
 
     public Optional&lt;CategoryDTO&gt; findById(long id){
-<span class="nc" id="L38">        Optional&lt;Category&gt; category = repository.findById(id);</span>
-<span class="nc bnc" id="L39" title="All 2 branches missed.">        return category.isPresent() ? Optional.of(mapper.toDTO(category.get())) : Optional.of(null);</span>
+<span class="fc" id="L38">        Optional&lt;Category&gt; category = repository.findById(id);</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">        return category.isPresent() ? Optional.of(mapper.toDTO(category.get())) : Optional.of(null);</span>
     }
 
     public CategoryDTO save(CreateCategoryDTO data){
-<span class="nc" id="L43">        Category entity = repository.save(mapper.toModel(data));</span>
-<span class="nc" id="L44">        return mapper.toDTO(entity);</span>
+<span class="fc" id="L43">        Category entity = repository.save(mapper.toModel(data));</span>
+<span class="fc" id="L44">        return mapper.toDTO(entity);</span>
     }
 
     public void update(long id, UpdateCategoryDTO data){
-<span class="nc" id="L48">        Optional&lt;Category&gt; current = repository.findById(id);</span>
-<span class="nc bnc" id="L49" title="All 2 branches missed.">        if (!current.isPresent()){</span>
-<span class="nc" id="L50">            throw new CategoryNotFoundException();</span>
+<span class="fc" id="L48">        Optional&lt;Category&gt; current = repository.findById(id);</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">        if (!current.isPresent()){</span>
+<span class="fc" id="L50">            throw new CategoryNotFoundException();</span>
         }
 <span class="nc" id="L52">        Category category = current.get();</span>
 <span class="nc" id="L53">        mapper.toModel(category, data);</span>
@@ -55,7 +55,7 @@ public class CategoryServiceImpl implements ICategoryService {
 <span class="nc" id="L55">    }</span>
 
     public void delete(long id){
-<span class="nc" id="L58">        repository.deleteById(id);</span>
-<span class="nc" id="L59">    }</span>
+<span class="fc" id="L58">        repository.deleteById(id);</span>
+<span class="fc" id="L59">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

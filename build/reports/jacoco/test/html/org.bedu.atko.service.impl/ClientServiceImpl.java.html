@@ -28,27 +28,27 @@ public class ClientServiceImpl implements IClientService {
 
 
     public List&lt;ClientDTO&gt; findAll() {
-<span class="nc" id="L31">        List&lt;Client&gt; clients = repository.findAll();</span>
-<span class="nc" id="L32">        return clients.stream().map(mapper::toDTO).toList();</span>
+<span class="fc" id="L31">        List&lt;Client&gt; clients = repository.findAll();</span>
+<span class="fc" id="L32">        return clients.stream().map(mapper::toDTO).toList();</span>
     }
 
 
     public Optional&lt;ClientDTO&gt; findById(long id) {
-<span class="nc" id="L37">        Optional&lt;Client&gt; client = repository.findById(id);</span>
-<span class="nc bnc" id="L38" title="All 2 branches missed.">        return client.isPresent() ? Optional.of(mapper.toDTO(client.get())) : Optional.of(null);</span>
+<span class="fc" id="L37">        Optional&lt;Client&gt; client = repository.findById(id);</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        return client.isPresent() ? Optional.of(mapper.toDTO(client.get())) : Optional.of(null);</span>
     }
 
 
     public ClientDTO save(CreateClientDTO data) {
-<span class="nc" id="L43">        Client entity = repository.save(mapper.toModel(data));</span>
-<span class="nc" id="L44">        return mapper.toDTO(entity);</span>
+<span class="fc" id="L43">        Client entity = repository.save(mapper.toModel(data));</span>
+<span class="fc" id="L44">        return mapper.toDTO(entity);</span>
     }
 
 
     public void update(long id, UpdateClientDTO data) {
-<span class="nc" id="L49">        Optional&lt;Client&gt; current = repository.findById(id);</span>
-<span class="nc bnc" id="L50" title="All 2 branches missed.">        if(!current.isPresent()){</span>
-<span class="nc" id="L51">            throw new ClientNotFoundException();</span>
+<span class="fc" id="L49">        Optional&lt;Client&gt; current = repository.findById(id);</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">        if(!current.isPresent()){</span>
+<span class="fc" id="L51">            throw new ClientNotFoundException();</span>
         }
 <span class="nc" id="L53">        Client client = current.get();</span>
 <span class="nc" id="L54">        mapper.toModel(client, data);</span>
@@ -58,8 +58,8 @@ public class ClientServiceImpl implements IClientService {
 
 
     public void delete(long id) {
-<span class="nc" id="L61">        repository.deleteById(id);</span>
+<span class="fc" id="L61">        repository.deleteById(id);</span>
 
-<span class="nc" id="L63">    }</span>
+<span class="fc" id="L63">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
